@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="bannerView" destination="2sZ-vK-RyD" id="VLG-J5-1qA"/>
+                <outlet property="bgScrollerView" destination="QxW-y3-vcR" id="aLx-T3-66R"/>
+                <outlet property="functionView" destination="fNt-Bg-jEx" id="ydM-TY-oqz"/>
+                <outlet property="headerView" destination="qc9-i3-vIu" id="PMo-7K-D25"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFW-tI-psR" userLabel="ReferenceView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="23V-Fv-K2p"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxW-y3-vcR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-WM-vuy" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qc9-i3-vIu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                    <color key="backgroundColor" red="0.40613769589999998" green="0.91083096590000001" blue="0.51773082120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNt-Bg-jEx">
+                                    <rect key="frame" x="0.0" y="180" width="375" height="315"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sZ-vK-RyD">
+                                    <rect key="frame" x="0.0" y="500" width="375" height="167"/>
+                                    <color key="backgroundColor" red="0.33333333329999998" green="0.68235294120000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="667" id="CjA-G9-kha"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.90588235289999997" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="ph9-WM-vuy" firstAttribute="top" secondItem="QxW-y3-vcR" secondAttribute="top" id="BWK-Jf-XAm"/>
+                        <constraint firstAttribute="trailing" secondItem="ph9-WM-vuy" secondAttribute="trailing" id="BkJ-AO-nqZ"/>
+                        <constraint firstItem="ph9-WM-vuy" firstAttribute="leading" secondItem="QxW-y3-vcR" secondAttribute="leading" id="vcR-Uc-VBf"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ph9-WM-vuy" firstAttribute="width" secondItem="gFW-tI-psR" secondAttribute="width" id="ErN-ls-1yw"/>
+                <constraint firstItem="QxW-y3-vcR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Faz-QP-TWD"/>
+                <constraint firstAttribute="trailing" secondItem="gFW-tI-psR" secondAttribute="trailing" id="K1l-22-GFv"/>
+                <constraint firstAttribute="trailing" secondItem="QxW-y3-vcR" secondAttribute="trailing" id="URp-Rx-eUt"/>
+                <constraint firstItem="gFW-tI-psR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Umx-Hs-EiW"/>
+                <constraint firstItem="QxW-y3-vcR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dXx-G0-NVy"/>
+                <constraint firstItem="gFW-tI-psR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rLh-YH-Nf4"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="304.5" y="362.5"/>
+        </view>
+    </objects>
+</document>
