@@ -13,15 +13,20 @@
 #import "MainViewController.h"
 #import "LORAlphaNavController.h"
 #import "Masonry.h"
+#import "ZYBannerView.h"
+#import "TLCityPickerController.h"
+#import "LoginViewController.h"
 
-@interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MainViewController ()<ZYBannerViewDataSource, ZYBannerViewDelegate,TLCityPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *bgScrollerView;
-
+@property (weak, nonatomic) IBOutlet UIButton *BtnLoginOrReg;
+@property (strong, nonatomic)  UIButton *NavLeftButton;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
 @property (weak, nonatomic) IBOutlet UIView *functionView;
-
+@property (weak, nonatomic) IBOutlet UICollectionView *nineGridView;
+@property (nonatomic, strong) NSArray *dataArray;
 @end
 
 @implementation MainViewController
@@ -29,21 +34,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 防止block中的循环引用
-    __weak typeof(self) weakSelf = self;
+    //__weak typeof(self) weakSelf = self;
     LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
     d.barAlpha = 0.f;
+    d.barColor=HexRGBAlpha(0x02C874, 1);
 
-    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
-    [btn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
-    [btn setTitle:@"北京" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(NavLeftClick) forControlEvents:UIControlEventTouchDown];
-    UIBarButtonItem *left=[[UIBarButtonItem alloc]initWithCustomView:btn];
+    self.NavLeftButton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 40)];
+    self.NavLeftButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [self.NavLeftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.NavLeftButton setTitle:@"北京市" forState:UIControlStateNormal];
+    [self.NavLeftButton addTarget:self action:@selector(NavLeftClick) forControlEvents:UIControlEventTouchDown];
+    UIBarButtonItem *left=[[UIBarButtonItem alloc]initWithCustomView:self.NavLeftButton];
+   
     [self.navigationItem setLeftBarButtonItem:left];
-
-    
-    self.bgScrollerView.contentSize=CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
     
 
+    
+    //self.bgScrollerView.contentSize=CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
+    [self initheaderView];//初始化九宫格
+    [self initfunctionView];//初始化九宫格
+    [self initbannerView];//初始化广告
 
 }
 
@@ -54,18 +64,145 @@
 
 -(void)NavLeftClick{
     NSLog(@"click left");
+    TLCityPickerController *cityPickerVC = [[TLCityPickerController alloc] init];
+    [cityPickerVC setDelegate:self];
+    
+    cityPickerVC.locationCityID = @"1400010000";
+    //    cityPickerVC.commonCitys = [[NSMutableArray alloc] initWithArray: @[@"1400010000", @"100010000"]];        // 最近访问城市，如果不设置，将自动管理
+    cityPickerVC.hotCitys = @[@"100010000", @"200010000", @"300210000", @"600010000", @"300110000"];
+    
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:cityPickerVC] animated:YES completion:^{
+        
+    }];
+}
+-(void)initheaderView{
+    self.headerView.backgroundColor=HexRGBAlpha(0x02C874, 1);
+    [self.BtnLoginOrReg.layer setMasksToBounds:YES];
+    [self.BtnLoginOrReg.layer setCornerRadius:5.0]; //设置矩形四个圆角半径
+    [self.BtnLoginOrReg.layer setBorderWidth:1.0]; //边框宽度
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGColorRef colorref = CGColorCreate(colorSpace,(CGFloat[]){ 1, 1, 1, 1 });
+    
+    [self.BtnLoginOrReg.layer setBorderColor:colorref];//边框颜色
 }
 
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+-(void)initbannerView{
+    ZYBannerView *banner=[[ZYBannerView alloc] init];
+    banner.dataSource = self;
+    banner.delegate = self;
+    banner.shouldLoop=NO;
+    banner.autoScroll=YES;
+    banner.scrollInterval=1.5;
+    [self.bannerView addSubview:banner];
+ 
+    [banner mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@0);
+        make.right.equalTo(@0);
+        make.bottom.equalTo(@0);
+        make.top.equalTo(@0);
+    }];
+    
 }
 
+-(void)initfunctionView{
+    
+}
 
+// 返回Banner需要显示Item(View)的个数
+- (NSInteger)numberOfItemsInBanner:(ZYBannerView *)banner
+{
+    return self.dataArray.count;
+}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+// 返回Banner在不同的index所要显示的View (可以是完全自定义的view, 且无需设置frame)
+- (UIView *)banner:(ZYBannerView *)banner viewForItemAtIndex:(NSInteger)index
+{
+    // 取出数据
+    NSString *imageName = self.dataArray[index];
+    
+    // 创建将要显示控件
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = [UIImage imageNamed:imageName];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    return imageView;
+}
+
+// 返回Footer在不同状态时要显示的文字
+- (NSString *)banner:(ZYBannerView *)banner titleForFooterWithState:(ZYBannerFooterState)footerState
+{
+    if (footerState == ZYBannerFooterStateIdle) {
+        return @"拖动进入下一页";
+    } else if (footerState == ZYBannerFooterStateTrigger) {
+        return @"释放进入下一页";
+    }
     return nil;
+}
+
+#pragma mark - ZYBannerViewDelegate
+
+// 在这里实现点击事件的处理
+- (void)banner:(ZYBannerView *)banner didSelectItemAtIndex:(NSInteger)index
+{
+    NSLog(@"点击了第%ld个项目", index);
+}
+
+// 在这里实现拖动footer后的事件处理
+- (void)bannerFooterDidTrigger:(ZYBannerView *)banner
+{
+    NSLog(@"触发了footer");
+
+}
+
+#pragma mark - TLCityPickerDelegate
+- (void) cityPickerController:(TLCityPickerController *)cityPickerViewController didSelectCity:(TLCity *)city
+{
+    [self.NavLeftButton setTitle:city.cityName forState:UIControlStateNormal];
+    [cityPickerViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+- (void) cityPickerControllerDidCancel:(TLCityPickerController *)cityPickerViewController
+{
+    [cityPickerViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+
+#pragma mark Getter
+
+- (NSArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = @[@"ad_0.jpg", @"ad_1.jpg", @"ad_2.jpg"];
+    }
+    return _dataArray;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 0;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    
+    return nil;
+}
+- (IBAction)btnRanqifeiClicked:(id)sender {
+    NSLog(@"燃气缴费");
+    [self ShowMsg:@"燃气缴费"];
+}
+
+- (IBAction)BtnLoginOrRegClicked:(id)sender {
+    
+    LoginViewController *login=[[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    LORAlphaNavController *loginNavigationController = [[LORAlphaNavController alloc] initWithRootViewController:login];
+
+    [self presentViewController:loginNavigationController animated:NO completion:nil];
 }
 
 @end

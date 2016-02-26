@@ -18,9 +18,9 @@
         NSMutableDictionary *options=[@{kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
                                        kCRToastFontKey             : [UIFont fontWithName:@"HelveticaNeue-Light" size:16],
                                        kCRToastTextColorKey        : [UIColor whiteColor],
-                                       kCRToastBackgroundColorKey  : [UIColor greenColor],
-                                       kCRToastAnimationInDirectionKey:@(CRToastAnimationDirectionLeft),
-                                       kCRToastAnimationOutDirectionKey:@(CRToastAnimationDirectionRight),
+                                       kCRToastBackgroundColorKey  : HexRGBAlpha(0x000000, 0.7),
+                                       kCRToastAnimationInDirectionKey:@(CRToastAnimationDirectionTop),
+                                       kCRToastAnimationOutDirectionKey:@(CRToastAnimationDirectionBottom),
                                        kCRToastAutorotateKey       : @(YES)} mutableCopy
                                       ];
         return [NSDictionary dictionaryWithDictionary:options];

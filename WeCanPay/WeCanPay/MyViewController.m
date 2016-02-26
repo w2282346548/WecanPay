@@ -20,6 +20,7 @@
     // Do any additional setup after loading the view from its nib.
     LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
     d.barAlpha = 1.f;
+        d.barColor=HexRGBAlpha(0x02C874, 1);
     [self setTitle:@"我的"];
 }
 

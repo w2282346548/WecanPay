@@ -21,6 +21,17 @@
 		719339971C7EA36B009B4D7B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 719339951C7EA36B009B4D7B /* MainViewController.m */; };
 		719339981C7EA36B009B4D7B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 719339961C7EA36B009B4D7B /* MainViewController.xib */; };
 		7193399C1C7EBD8F009B4D7B /* ProductConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7193399B1C7EBD8F009B4D7B /* ProductConfig.m */; };
+		71CBC66F1C802E6500C06D59 /* CityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71CBC6631C802E6500C06D59 /* CityData.plist */; };
+		71CBC6701C802E6500C06D59 /* TLCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC6651C802E6500C06D59 /* TLCity.m */; };
+		71CBC6711C802E6500C06D59 /* TLCityGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC6671C802E6500C06D59 /* TLCityGroupCell.m */; };
+		71CBC6721C802E6500C06D59 /* TLCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC6691C802E6500C06D59 /* TLCityHeaderView.m */; };
+		71CBC6731C802E6500C06D59 /* TLCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC66B1C802E6500C06D59 /* TLCityPickerController.m */; };
+		71CBC6741C802E6500C06D59 /* TLCityPickerSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC66E1C802E6500C06D59 /* TLCityPickerSearchResultController.m */; };
+		71CBC6791C803E6000C06D59 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC6771C803E6000C06D59 /* LoginViewController.m */; };
+		71CBC67A1C803E6000C06D59 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CBC6781C803E6000C06D59 /* LoginViewController.xib */; };
+		71CBC6821C80440000C06D59 /* MyInputViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC67E1C80440000C06D59 /* MyInputViewModel.m */; };
+		71CBC6831C80440000C06D59 /* MyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC6801C80440000C06D59 /* MyInputView.m */; };
+		71CBC6841C80440000C06D59 /* MyInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CBC6811C80440000C06D59 /* MyInputView.xib */; };
 		71E224971C7ED6B60069FCFF /* LORAlphaNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */; };
 		71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E224981C7ED6C40069FCFF /* bigShadow.png */; };
 		71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2249B1C7EDE1C0069FCFF /* MyViewController.m */; };
@@ -52,6 +63,27 @@
 		719339961C7EA36B009B4D7B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		7193399A1C7EBD8F009B4D7B /* ProductConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductConfig.h; sourceTree = "<group>"; };
 		7193399B1C7EBD8F009B4D7B /* ProductConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductConfig.m; sourceTree = "<group>"; };
+		71CBC6631C802E6500C06D59 /* CityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityData.plist; sourceTree = "<group>"; };
+		71CBC6641C802E6500C06D59 /* TLCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCity.h; sourceTree = "<group>"; };
+		71CBC6651C802E6500C06D59 /* TLCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCity.m; sourceTree = "<group>"; };
+		71CBC6661C802E6500C06D59 /* TLCityGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityGroupCell.h; sourceTree = "<group>"; };
+		71CBC6671C802E6500C06D59 /* TLCityGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityGroupCell.m; sourceTree = "<group>"; };
+		71CBC6681C802E6500C06D59 /* TLCityHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityHeaderView.h; sourceTree = "<group>"; };
+		71CBC6691C802E6500C06D59 /* TLCityHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityHeaderView.m; sourceTree = "<group>"; };
+		71CBC66A1C802E6500C06D59 /* TLCityPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerController.h; sourceTree = "<group>"; };
+		71CBC66B1C802E6500C06D59 /* TLCityPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerController.m; sourceTree = "<group>"; };
+		71CBC66C1C802E6500C06D59 /* TLCityPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerDelegate.h; sourceTree = "<group>"; };
+		71CBC66D1C802E6500C06D59 /* TLCityPickerSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLCityPickerSearchResultController.h; sourceTree = "<group>"; };
+		71CBC66E1C802E6500C06D59 /* TLCityPickerSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLCityPickerSearchResultController.m; sourceTree = "<group>"; };
+		71CBC6761C803E6000C06D59 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		71CBC6771C803E6000C06D59 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		71CBC6781C803E6000C06D59 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		71CBC67D1C80440000C06D59 /* MyInputViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInputViewModel.h; sourceTree = "<group>"; };
+		71CBC67E1C80440000C06D59 /* MyInputViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInputViewModel.m; sourceTree = "<group>"; };
+		71CBC67F1C80440000C06D59 /* MyInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInputView.h; sourceTree = "<group>"; };
+		71CBC6801C80440000C06D59 /* MyInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInputView.m; sourceTree = "<group>"; };
+		71CBC6811C80440000C06D59 /* MyInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyInputView.xib; sourceTree = "<group>"; };
+		71CBC6851C804D6A00C06D59 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		71E224951C7ED6B60069FCFF /* LORAlphaNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORAlphaNavController.h; sourceTree = "<group>"; };
 		71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORAlphaNavController.m; sourceTree = "<group>"; };
 		71E224981C7ED6C40069FCFF /* bigShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigShadow.png; sourceTree = "<group>"; };
@@ -118,6 +150,7 @@
 				7193397A1C7E872E009B4D7B /* Info.plist */,
 				719339751C7E872E009B4D7B /* Assets.xcassets */,
 				719339771C7E872E009B4D7B /* LaunchScreen.storyboard */,
+				71CBC6851C804D6A00C06D59 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -139,6 +172,7 @@
 		7193398E1C7E8ED4009B4D7B /* ThridLib */ = {
 			isa = PBXGroup;
 			children = (
+				71CBC6621C802E6500C06D59 /* TLCityPicker */,
 				719339821C7E8E88009B4D7B /* ZYBannerView */,
 			);
 			name = ThridLib;
@@ -147,6 +181,7 @@
 		7193398F1C7E8EE7009B4D7B /* System */ = {
 			isa = PBXGroup;
 			children = (
+				71CBC6751C803E4000C06D59 /* Login */,
 				71E224941C7ED6520069FCFF /* AlphaNavController */,
 				719339991C7EBD67009B4D7B /* Config */,
 				719339901C7E8F06009B4D7B /* Base */,
@@ -174,6 +209,48 @@
 				7193399B1C7EBD8F009B4D7B /* ProductConfig.m */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		71CBC6621C802E6500C06D59 /* TLCityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				71CBC6631C802E6500C06D59 /* CityData.plist */,
+				71CBC6641C802E6500C06D59 /* TLCity.h */,
+				71CBC6651C802E6500C06D59 /* TLCity.m */,
+				71CBC6661C802E6500C06D59 /* TLCityGroupCell.h */,
+				71CBC6671C802E6500C06D59 /* TLCityGroupCell.m */,
+				71CBC6681C802E6500C06D59 /* TLCityHeaderView.h */,
+				71CBC6691C802E6500C06D59 /* TLCityHeaderView.m */,
+				71CBC66A1C802E6500C06D59 /* TLCityPickerController.h */,
+				71CBC66B1C802E6500C06D59 /* TLCityPickerController.m */,
+				71CBC66C1C802E6500C06D59 /* TLCityPickerDelegate.h */,
+				71CBC66D1C802E6500C06D59 /* TLCityPickerSearchResultController.h */,
+				71CBC66E1C802E6500C06D59 /* TLCityPickerSearchResultController.m */,
+			);
+			path = TLCityPicker;
+			sourceTree = "<group>";
+		};
+		71CBC6751C803E4000C06D59 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				71CBC67C1C8043EF00C06D59 /* View */,
+				71CBC6761C803E6000C06D59 /* LoginViewController.h */,
+				71CBC6771C803E6000C06D59 /* LoginViewController.m */,
+				71CBC6781C803E6000C06D59 /* LoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		71CBC67C1C8043EF00C06D59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71CBC67D1C80440000C06D59 /* MyInputViewModel.h */,
+				71CBC67E1C80440000C06D59 /* MyInputViewModel.m */,
+				71CBC67F1C80440000C06D59 /* MyInputView.h */,
+				71CBC6801C80440000C06D59 /* MyInputView.m */,
+				71CBC6811C80440000C06D59 /* MyInputView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		71E224941C7ED6520069FCFF /* AlphaNavController */ = {
@@ -247,6 +324,7 @@
 				TargetAttributes = {
 					719339651C7E872D009B4D7B = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = AU6W58SRT3;
 					};
 				};
 			};
@@ -276,10 +354,13 @@
 				71E2249E1C7EDE1C0069FCFF /* MyViewController.xib in Resources */,
 				7193398C1C7E8E88009B4D7B /* ZYBannerView.bundle in Resources */,
 				719339791C7E872E009B4D7B /* LaunchScreen.storyboard in Resources */,
+				71CBC66F1C802E6500C06D59 /* CityData.plist in Resources */,
 				71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */,
+				71CBC6841C80440000C06D59 /* MyInputView.xib in Resources */,
 				719339981C7EA36B009B4D7B /* MainViewController.xib in Resources */,
 				719339761C7E872E009B4D7B /* Assets.xcassets in Resources */,
 				719339811C7E87C3009B4D7B /* Podfile in Resources */,
+				71CBC67A1C803E6000C06D59 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,14 +406,22 @@
 			files = (
 				7193398D1C7E8E88009B4D7B /* ZYBannerView.m in Sources */,
 				7193399C1C7EBD8F009B4D7B /* ProductConfig.m in Sources */,
+				71CBC6731C802E6500C06D59 /* TLCityPickerController.m in Sources */,
+				71CBC6721C802E6500C06D59 /* TLCityHeaderView.m in Sources */,
 				7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */,
 				7193398B1C7E8E88009B4D7B /* ZYBannerFooter.m in Sources */,
+				71CBC6741C802E6500C06D59 /* TLCityPickerSearchResultController.m in Sources */,
 				71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */,
+				71CBC6791C803E6000C06D59 /* LoginViewController.m in Sources */,
 				7193398A1C7E8E88009B4D7B /* ZYBannerCell.m in Sources */,
+				71CBC6821C80440000C06D59 /* MyInputViewModel.m in Sources */,
+				71CBC6831C80440000C06D59 /* MyInputView.m in Sources */,
+				71CBC6711C802E6500C06D59 /* TLCityGroupCell.m in Sources */,
 				719339971C7EA36B009B4D7B /* MainViewController.m in Sources */,
 				719339931C7E8F42009B4D7B /* BaseViewController.m in Sources */,
 				71E224971C7ED6B60069FCFF /* LORAlphaNavController.m in Sources */,
 				7193396B1C7E872E009B4D7B /* main.m in Sources */,
+				71CBC6701C802E6500C06D59 /* TLCity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,10 +524,16 @@
 			baseConfigurationReference = 6CD4EEC409FBE3AE1F5FC632 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WeCanpay/PrefixHeader.pch";
 				INFOPLIST_FILE = WeCanPay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wecan.WeCanPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -447,10 +542,16 @@
 			baseConfigurationReference = B0B14BDFCAA07B68AFE7E7F9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WeCanpay/PrefixHeader.pch";
 				INFOPLIST_FILE = WeCanPay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wecan.WeCanPay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
