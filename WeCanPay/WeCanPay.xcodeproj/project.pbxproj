@@ -32,6 +32,11 @@
 		71CBC6821C80440000C06D59 /* MyInputViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC67E1C80440000C06D59 /* MyInputViewModel.m */; };
 		71CBC6831C80440000C06D59 /* MyInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CBC6801C80440000C06D59 /* MyInputView.m */; };
 		71CBC6841C80440000C06D59 /* MyInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71CBC6811C80440000C06D59 /* MyInputView.xib */; };
+		71D093591C83D7B8003E27FC /* GVUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D093581C83D7B8003E27FC /* GVUserDefaults.m */; };
+		71D0935C1C83D84B003E27FC /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D0935B1C83D84B003E27FC /* GVUserDefaults+Properties.m */; };
+		71D093601C83DCA0003E27FC /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D0935F1C83DCA0003E27FC /* DLRadioButton.m */; };
+		71D093641C83E0C3003E27FC /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D093621C83E0C3003E27FC /* PayViewController.m */; };
+		71D093651C83E0C3003E27FC /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D093631C83E0C3003E27FC /* PayViewController.xib */; };
 		71E224971C7ED6B60069FCFF /* LORAlphaNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */; };
 		71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E224981C7ED6C40069FCFF /* bigShadow.png */; };
 		71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2249B1C7EDE1C0069FCFF /* MyViewController.m */; };
@@ -84,6 +89,15 @@
 		71CBC6801C80440000C06D59 /* MyInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInputView.m; sourceTree = "<group>"; };
 		71CBC6811C80440000C06D59 /* MyInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyInputView.xib; sourceTree = "<group>"; };
 		71CBC6851C804D6A00C06D59 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		71D093571C83D7B8003E27FC /* GVUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVUserDefaults.h; sourceTree = "<group>"; };
+		71D093581C83D7B8003E27FC /* GVUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVUserDefaults.m; sourceTree = "<group>"; };
+		71D0935A1C83D84B003E27FC /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; };
+		71D0935B1C83D84B003E27FC /* GVUserDefaults+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Properties.m"; sourceTree = "<group>"; };
+		71D0935E1C83DCA0003E27FC /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		71D0935F1C83DCA0003E27FC /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		71D093611C83E0C3003E27FC /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		71D093621C83E0C3003E27FC /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
+		71D093631C83E0C3003E27FC /* PayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
 		71E224951C7ED6B60069FCFF /* LORAlphaNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORAlphaNavController.h; sourceTree = "<group>"; };
 		71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORAlphaNavController.m; sourceTree = "<group>"; };
 		71E224981C7ED6C40069FCFF /* bigShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigShadow.png; sourceTree = "<group>"; };
@@ -172,6 +186,8 @@
 		7193398E1C7E8ED4009B4D7B /* ThridLib */ = {
 			isa = PBXGroup;
 			children = (
+				71D0935D1C83DCA0003E27FC /* DLRadioButton */,
+				71D093561C83D7B8003E27FC /* GVUserDefaults */,
 				71CBC6621C802E6500C06D59 /* TLCityPicker */,
 				719339821C7E8E88009B4D7B /* ZYBannerView */,
 			);
@@ -189,6 +205,7 @@
 				7193396D1C7E872E009B4D7B /* AppDelegate.m */,
 				71E2249F1C7EF32A0069FCFF /* Main */,
 				71E224A01C7EF3320069FCFF /* My */,
+				71D093661C83E0CB003E27FC /* Pay */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -205,6 +222,8 @@
 		719339991C7EBD67009B4D7B /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				71D0935A1C83D84B003E27FC /* GVUserDefaults+Properties.h */,
+				71D0935B1C83D84B003E27FC /* GVUserDefaults+Properties.m */,
 				7193399A1C7EBD8F009B4D7B /* ProductConfig.h */,
 				7193399B1C7EBD8F009B4D7B /* ProductConfig.m */,
 			);
@@ -251,6 +270,35 @@
 				71CBC6811C80440000C06D59 /* MyInputView.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		71D093561C83D7B8003E27FC /* GVUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				71D093571C83D7B8003E27FC /* GVUserDefaults.h */,
+				71D093581C83D7B8003E27FC /* GVUserDefaults.m */,
+			);
+			name = GVUserDefaults;
+			path = ZYBannerView/GVUserDefaults;
+			sourceTree = "<group>";
+		};
+		71D0935D1C83DCA0003E27FC /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				71D0935E1C83DCA0003E27FC /* DLRadioButton.h */,
+				71D0935F1C83DCA0003E27FC /* DLRadioButton.m */,
+			);
+			path = DLRadioButton;
+			sourceTree = "<group>";
+		};
+		71D093661C83E0CB003E27FC /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				71D093611C83E0C3003E27FC /* PayViewController.h */,
+				71D093621C83E0C3003E27FC /* PayViewController.m */,
+				71D093631C83E0C3003E27FC /* PayViewController.xib */,
+			);
+			name = Pay;
 			sourceTree = "<group>";
 		};
 		71E224941C7ED6520069FCFF /* AlphaNavController */ = {
@@ -361,6 +409,7 @@
 				719339761C7E872E009B4D7B /* Assets.xcassets in Resources */,
 				719339811C7E87C3009B4D7B /* Podfile in Resources */,
 				71CBC67A1C803E6000C06D59 /* LoginViewController.xib in Resources */,
+				71D093651C83E0C3003E27FC /* PayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,18 +459,22 @@
 				71CBC6721C802E6500C06D59 /* TLCityHeaderView.m in Sources */,
 				7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */,
 				7193398B1C7E8E88009B4D7B /* ZYBannerFooter.m in Sources */,
+				71D0935C1C83D84B003E27FC /* GVUserDefaults+Properties.m in Sources */,
 				71CBC6741C802E6500C06D59 /* TLCityPickerSearchResultController.m in Sources */,
 				71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */,
 				71CBC6791C803E6000C06D59 /* LoginViewController.m in Sources */,
 				7193398A1C7E8E88009B4D7B /* ZYBannerCell.m in Sources */,
 				71CBC6821C80440000C06D59 /* MyInputViewModel.m in Sources */,
 				71CBC6831C80440000C06D59 /* MyInputView.m in Sources */,
+				71D093591C83D7B8003E27FC /* GVUserDefaults.m in Sources */,
 				71CBC6711C802E6500C06D59 /* TLCityGroupCell.m in Sources */,
 				719339971C7EA36B009B4D7B /* MainViewController.m in Sources */,
+				71D093601C83DCA0003E27FC /* DLRadioButton.m in Sources */,
 				719339931C7E8F42009B4D7B /* BaseViewController.m in Sources */,
 				71E224971C7ED6B60069FCFF /* LORAlphaNavController.m in Sources */,
 				7193396B1C7E872E009B4D7B /* main.m in Sources */,
 				71CBC6701C802E6500C06D59 /* TLCity.m in Sources */,
+				71D093641C83E0C3003E27FC /* PayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

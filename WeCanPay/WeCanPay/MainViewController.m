@@ -16,6 +16,7 @@
 #import "ZYBannerView.h"
 #import "TLCityPickerController.h"
 #import "LoginViewController.h"
+#import "PayViewController.h"
 
 @interface MainViewController ()<ZYBannerViewDataSource, ZYBannerViewDelegate,TLCityPickerDelegate>
 
@@ -51,7 +52,7 @@
 
     
     //self.bgScrollerView.contentSize=CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
-    [self initheaderView];//初始化九宫格
+    [self initheaderView];//初始化头部
     [self initfunctionView];//初始化九宫格
     [self initbannerView];//初始化广告
 
@@ -194,15 +195,38 @@
 }
 - (IBAction)btnRanqifeiClicked:(id)sender {
     NSLog(@"燃气缴费");
-    [self ShowMsg:@"燃气缴费"];
+    BOOL islogin=[GVUserDefaults standardUserDefaults].isLogin;
+    if (islogin) {
+        
+        PayViewController *payController=[[PayViewController alloc]initWithNibName:@"PayViewController" bundle:nil];
+//        [payController setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:payController animated:YES];
+        
+    }else{
+        [self GotoLogin];
+    }
+
 }
 
 - (IBAction)BtnLoginOrRegClicked:(id)sender {
     
+    [self GotoLogin];
+}
+
+-(void)GotoLogin{
     LoginViewController *login=[[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
     LORAlphaNavController *loginNavigationController = [[LORAlphaNavController alloc] initWithRootViewController:login];
+    loginNavigationController.modalPresentationStyle=UIModalPresentationFormSheet;
+    loginNavigationController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    [self presentViewController:loginNavigationController animated:YES completion:nil];
+}
 
-    [self presentViewController:loginNavigationController animated:NO completion:nil];
+
+-(void)viewWillAppear:(BOOL)animated{
+    if (self.rdv_tabBarController.isTabBarHidden) {
+          [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
+    }
+  
 }
 
 @end

@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="btnLogin" destination="6xB-d9-eVV" id="Kmc-cW-kxF"/>
+                <outlet property="vAccount" destination="SYW-9z-FiF" id="C7U-WL-Crj"/>
+                <outlet property="vPassword" destination="Z8X-AT-8BB" id="38E-YR-UBM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,7 +43,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.33000000000000002" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="6xB-d9-eVV" firstAttribute="top" secondItem="Z8X-AT-8BB" secondAttribute="bottom" constant="14" id="64W-a0-yNx"/>
                 <constraint firstItem="6xB-d9-eVV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="6pq-0X-DSS"/>

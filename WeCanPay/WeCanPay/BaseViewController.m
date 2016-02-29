@@ -16,7 +16,7 @@
 
 -(instancetype)init{
     if (self=[super init]) {
-       
+        
     }
     return self;
 }
@@ -34,5 +34,10 @@
 
 +(void)ShowLoding{
 
+}
+
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 @end
