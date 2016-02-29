@@ -36,27 +36,31 @@
     [super viewDidLoad];
     // 防止block中的循环引用
     //__weak typeof(self) weakSelf = self;
-    LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
-    d.barAlpha = 0.f;
-    d.barColor=HexRGBAlpha(0x02C874, 1);
-
-    self.NavLeftButton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 40)];
-    self.NavLeftButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    [self.NavLeftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.NavLeftButton setTitle:@"北京市" forState:UIControlStateNormal];
-    [self.NavLeftButton addTarget:self action:@selector(NavLeftClick) forControlEvents:UIControlEventTouchDown];
-    UIBarButtonItem *left=[[UIBarButtonItem alloc]initWithCustomView:self.NavLeftButton];
-   
-    [self.navigationItem setLeftBarButtonItem:left];
-    
 
     
+
+       [self initNavBar];
     //self.bgScrollerView.contentSize=CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
     [self initheaderView];//初始化头部
     [self initfunctionView];//初始化九宫格
     [self initbannerView];//初始化广告
 
 }
+-(void)initNavBar{
+    LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
+    d.barAlpha = 0.f;
+    d.barColor=HexRGBAlpha(0x02C874, 1);
+    
+    self.NavLeftButton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 40)];
+    self.NavLeftButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [self.NavLeftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.NavLeftButton setTitle:@"北京市" forState:UIControlStateNormal];
+    [self.NavLeftButton addTarget:self action:@selector(NavLeftClick) forControlEvents:UIControlEventTouchDown];
+    UIBarButtonItem *left=[[UIBarButtonItem alloc]initWithCustomView:self.NavLeftButton];
+    
+    [self.navigationItem setLeftBarButtonItem:left];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

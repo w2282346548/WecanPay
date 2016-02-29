@@ -49,9 +49,6 @@
     
     UIBarButtonItem *right=[[UIBarButtonItem alloc]initWithTitle:@"注册" style:UIBarButtonItemStyleDone target:self action:@selector(NavRightClick)];
     [self.navigationItem setRightBarButtonItem:right];
-    
-
-
 
 }
 -(void)initBtnLogin{
