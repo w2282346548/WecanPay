@@ -17,6 +17,7 @@
 #import "TLCityPickerController.h"
 #import "LoginViewController.h"
 #import "PayViewController.h"
+#import "ChooseViewController.h"
 
 @interface MainViewController ()<ZYBannerViewDataSource, ZYBannerViewDelegate,TLCityPickerDelegate>
 
@@ -201,10 +202,10 @@
     NSLog(@"燃气缴费");
     BOOL islogin=[GVUserDefaults standardUserDefaults].isLogin;
     if (islogin) {
+        ChooseViewController *chooseController=[[ChooseViewController alloc]initWithNibName:@"ChooseViewController" bundle:nil];
         
-        PayViewController *payController=[[PayViewController alloc]initWithNibName:@"PayViewController" bundle:nil];
 //        [payController setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:payController animated:YES];
+        [self.navigationController pushViewController:chooseController animated:YES];
         
     }else{
         [self GotoLogin];

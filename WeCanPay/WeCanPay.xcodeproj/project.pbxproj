@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4CC2F51F4C3411E0F08BD581 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00439CB25FB2E8D7C74E8B24 /* libPods.a */; };
+		7118977B1C85800A0095EFDD /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711897791C85800A0095EFDD /* ChooseViewController.m */; };
+		7118977C1C85800A0095EFDD /* ChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7118977A1C85800A0095EFDD /* ChooseViewController.xib */; };
+		711897801C8595C00095EFDD /* UIScrollView+UITouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118977F1C8595C00095EFDD /* UIScrollView+UITouchEvent.m */; };
 		7193396B1C7E872E009B4D7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7193396A1C7E872E009B4D7B /* main.m */; };
 		7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7193396D1C7E872E009B4D7B /* AppDelegate.m */; };
 		719339761C7E872E009B4D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719339751C7E872E009B4D7B /* Assets.xcassets */; };
@@ -46,6 +49,11 @@
 /* Begin PBXFileReference section */
 		00439CB25FB2E8D7C74E8B24 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD4EEC409FBE3AE1F5FC632 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		711897781C85800A0095EFDD /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
+		711897791C85800A0095EFDD /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
+		7118977A1C85800A0095EFDD /* ChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseViewController.xib; sourceTree = "<group>"; };
+		7118977E1C8595C00095EFDD /* UIScrollView+UITouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+UITouchEvent.h"; sourceTree = "<group>"; };
+		7118977F1C8595C00095EFDD /* UIScrollView+UITouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+UITouchEvent.m"; sourceTree = "<group>"; };
 		719339661C7E872D009B4D7B /* WeCanPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCanPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7193396A1C7E872E009B4D7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7193396C1C7E872E009B4D7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +136,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7118977D1C8580380095EFDD /* Choose */ = {
+			isa = PBXGroup;
+			children = (
+				711897781C85800A0095EFDD /* ChooseViewController.h */,
+				711897791C85800A0095EFDD /* ChooseViewController.m */,
+				7118977A1C85800A0095EFDD /* ChooseViewController.xib */,
+			);
+			name = Choose;
+			sourceTree = "<group>";
+		};
 		7193395D1C7E872D009B4D7B = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +171,8 @@
 				7193398E1C7E8ED4009B4D7B /* ThridLib */,
 				7193398F1C7E8EE7009B4D7B /* System */,
 				719339691C7E872E009B4D7B /* Supporting Files */,
+				7118977E1C8595C00095EFDD /* UIScrollView+UITouchEvent.h */,
+				7118977F1C8595C00095EFDD /* UIScrollView+UITouchEvent.m */,
 			);
 			path = WeCanPay;
 			sourceTree = "<group>";
@@ -206,6 +226,7 @@
 				71E2249F1C7EF32A0069FCFF /* Main */,
 				71E224A01C7EF3320069FCFF /* My */,
 				71D093661C83E0CB003E27FC /* Pay */,
+				7118977D1C8580380095EFDD /* Choose */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -400,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71E2249E1C7EDE1C0069FCFF /* MyViewController.xib in Resources */,
+				7118977C1C85800A0095EFDD /* ChooseViewController.xib in Resources */,
 				7193398C1C7E8E88009B4D7B /* ZYBannerView.bundle in Resources */,
 				719339791C7E872E009B4D7B /* LaunchScreen.storyboard in Resources */,
 				71CBC66F1C802E6500C06D59 /* CityData.plist in Resources */,
@@ -463,7 +485,9 @@
 				71CBC6741C802E6500C06D59 /* TLCityPickerSearchResultController.m in Sources */,
 				71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */,
 				71CBC6791C803E6000C06D59 /* LoginViewController.m in Sources */,
+				7118977B1C85800A0095EFDD /* ChooseViewController.m in Sources */,
 				7193398A1C7E8E88009B4D7B /* ZYBannerCell.m in Sources */,
+				711897801C8595C00095EFDD /* UIScrollView+UITouchEvent.m in Sources */,
 				71CBC6821C80440000C06D59 /* MyInputViewModel.m in Sources */,
 				71CBC6831C80440000C06D59 /* MyInputView.m in Sources */,
 				71D093591C83D7B8003E27FC /* GVUserDefaults.m in Sources */,

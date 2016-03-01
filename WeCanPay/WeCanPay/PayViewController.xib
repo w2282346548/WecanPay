@@ -166,7 +166,7 @@
                                     <real key="value" value="2"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
-                                    <real key="value" value="12"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
                                     <real key="value" value="6"/>
@@ -191,7 +191,7 @@
                                     <real key="value" value="2"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
-                                    <real key="value" value="12"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
                                     <color key="value" red="1" green="0.26223299779999998" blue="0.42728786200000002" alpha="1" colorSpace="calibratedRGB"/>
