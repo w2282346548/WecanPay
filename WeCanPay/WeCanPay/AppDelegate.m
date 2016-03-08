@@ -13,6 +13,7 @@
 #import "RDVTabBarController.h"
 #import "RDVTabBarItem.h"
 #import "MyViewController.h"
+#import <AFNetworking/AFNetworkReachabilityManager.h>
 
 @interface AppDelegate ()
 
@@ -22,7 +23,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
+    
+    
     [CRToastManager setDefaultOptions:[ProductConfig new].CRToastOptions];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

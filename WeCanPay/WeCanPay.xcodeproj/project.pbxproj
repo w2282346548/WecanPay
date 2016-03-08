@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4CC2F51F4C3411E0F08BD581 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00439CB25FB2E8D7C74E8B24 /* libPods.a */; };
+		711236B71C8EAB2B00ADE70C /* LORNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 711236B61C8EAB2B00ADE70C /* LORNetWorkManager.m */; };
 		7118977B1C85800A0095EFDD /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711897791C85800A0095EFDD /* ChooseViewController.m */; };
 		7118977C1C85800A0095EFDD /* ChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7118977A1C85800A0095EFDD /* ChooseViewController.xib */; };
 		711897801C8595C00095EFDD /* UIScrollView+UITouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118977F1C8595C00095EFDD /* UIScrollView+UITouchEvent.m */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		00439CB25FB2E8D7C74E8B24 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD4EEC409FBE3AE1F5FC632 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		711236B51C8EAB2B00ADE70C /* LORNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORNetWorkManager.h; sourceTree = "<group>"; };
+		711236B61C8EAB2B00ADE70C /* LORNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORNetWorkManager.m; sourceTree = "<group>"; };
 		711897781C85800A0095EFDD /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
 		711897791C85800A0095EFDD /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
 		7118977A1C85800A0095EFDD /* ChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +139,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		711236B41C8EA1CA00ADE70C /* LorNetTool */ = {
+			isa = PBXGroup;
+			children = (
+				711236B51C8EAB2B00ADE70C /* LORNetWorkManager.h */,
+				711236B61C8EAB2B00ADE70C /* LORNetWorkManager.m */,
+			);
+			name = LorNetTool;
+			sourceTree = "<group>";
+		};
 		7118977D1C8580380095EFDD /* Choose */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +218,7 @@
 		7193398E1C7E8ED4009B4D7B /* ThridLib */ = {
 			isa = PBXGroup;
 			children = (
+				711236B41C8EA1CA00ADE70C /* LorNetTool */,
 				71D0935D1C83DCA0003E27FC /* DLRadioButton */,
 				71D093561C83D7B8003E27FC /* GVUserDefaults */,
 				71CBC6621C802E6500C06D59 /* TLCityPicker */,
@@ -475,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711236B71C8EAB2B00ADE70C /* LORNetWorkManager.m in Sources */,
 				7193398D1C7E8E88009B4D7B /* ZYBannerView.m in Sources */,
 				7193399C1C7EBD8F009B4D7B /* ProductConfig.m in Sources */,
 				71CBC6731C802E6500C06D59 /* TLCityPickerController.m in Sources */,

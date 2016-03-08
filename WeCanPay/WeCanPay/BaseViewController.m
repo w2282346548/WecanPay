@@ -7,8 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import <AFNetworking/AFNetworkReachabilityManager.h>
 
-@interface BaseViewController ()
+
+@interface BaseViewController ()<NetStateDelegate>
 
 @end
 
@@ -26,6 +28,44 @@
     self.hub.mode=MBProgressHUDModeIndeterminate;
     self.hub.detailsLabelText=@"Login....";
     [self.view addSubview:self.hub];
+    
+    self.networkDelegate=self;
+    
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusNotReachable:{
+                if (self.networkDelegate) {
+                    [self.networkDelegate NetWorkIsNo];
+                }
+                break;}
+            case AFNetworkReachabilityStatusReachableViaWiFi:{
+                if (self.networkDelegate) {
+                    [self.networkDelegate NetWorkIsWIFI];
+                }
+                break;}
+            case AFNetworkReachabilityStatusReachableViaWWAN:{
+                if (self.networkDelegate) {
+                    [self.networkDelegate NetWorkIsWWAN];
+                }
+                break;}
+            case AFNetworkReachabilityStatusUnknown:{
+                break;}
+            default:
+                break;
+        }
+    }];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+
+    
+}
+
+-(void)NetWorkIsWWAN{
+    NSLog(@"ahafhjksahfjk");
+}
+-(void)NetWorkIsNo{
+    NSLog(@"nonet");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"nonet" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 -(void)ShowMsg:(NSString *)msg{
@@ -35,6 +75,8 @@
 +(void)ShowLoding{
 
 }
+
+
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
