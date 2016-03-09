@@ -7,4 +7,4 @@ pod 'RDVTabBarController', '~> 1.1.9'
 
 pod 'AFNetworking', '~> 3.0'
 pod 'CRToast', '~> 0.0.9'
-pod 'Toast', '~> 3.0'
+#pod 'Toast', '~> 3.0'

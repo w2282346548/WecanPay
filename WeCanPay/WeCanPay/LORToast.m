@@ -1,29 +1,13 @@
 //
-//  UIView+Toast.m
-//  Toast
+//  LORToast.m
+//  WeCanPay
 //
-//  Copyright (c) 2011-2015 Charles Scalesse.
+//  Created by wecan－mac on 16/3/9.
+//  Copyright © 2016年 wecan. All rights reserved.
 //
-//  Permission is hereby granted, free of charge, to any person obtaining a
-//  copy of this software and associated documentation files (the
-//  "Software"), to deal in the Software without restriction, including
-//  without limitation the rights to use, copy, modify, merge, publish,
-//  distribute, sublicense, and/or sell copies of the Software, and to
-//  permit persons to whom the Software is furnished to do so, subject to
-//  the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included
-//  in all copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-//  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-//  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-//  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-//  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-//  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-//  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "UIView+Toast.h"
+#import "LORToast.h"
+
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 
@@ -40,14 +24,16 @@ static const NSString * CSToastCompletionKey        = @"CSToastCompletionKey";
 // Keys for values associated with self
 static const NSString * CSToastActiveToastViewKey   = @"CSToastActiveToastViewKey";
 static const NSString * CSToastActivityViewKey      = @"CSToastActivityViewKey";
+
+static const NSString * CSToastCoustomViewKey      = @"CSToastCoustomViewKey";
 static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 
-static const NSTimeInterval CSToastFadeDuration     = 0.2;
+static const NSTimeInterval CSToastFadeDuration     = 1.2;
 
 @interface UIView (ToastPrivate)
 
 /**
- These private methods are being prefixed with "cs_" to reduce the likelihood of non-obvious 
+ These private methods are being prefixed with "cs_" to reduce the likelihood of non-obvious
  naming conflicts with other UIView methods.
  
  @discussion Should the public API also use the cs_ prefix? Technically it should, but it
@@ -146,7 +132,7 @@ static const NSTimeInterval CSToastFadeDuration     = 0.2;
 - (void)cs_hideToast:(UIView *)toast {
     [self cs_hideToast:toast fromTap:NO];
 }
-    
+
 - (void)cs_hideToast:(UIView *)toast fromTap:(BOOL)fromTap {
     [UIView animateWithDuration:CSToastFadeDuration
                           delay:0.0
@@ -334,6 +320,42 @@ static const NSTimeInterval CSToastFadeDuration     = 0.2;
     [self cs_hideToast:toast fromTap:YES];
 }
 
+#pragma mark - CustomsView
+
+- (void)makeToastWithCustomView:(UIView *)customView WithPosition:(id)position{
+    UIView *existingCustomView = (UIView *)objc_getAssociatedObject(self, &CSToastCoustomViewKey);
+    if (existingCustomView != nil) return;
+    
+    // associate the customs view with self
+    objc_setAssociatedObject (self, &CSToastCoustomViewKey, customView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self addSubview:customView];
+    
+    [UIView animateWithDuration:CSToastFadeDuration delay:0.f options:(UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionBeginFromCurrentState) animations:^{
+        customView.alpha=1.f;
+    } completion:^(BOOL finished) {
+        
+        
+    }];
+    
+
+}
+- (void)hideToastCustomView {
+     UIView *existingCustomView = (UIView *)objc_getAssociatedObject(self, &CSToastCoustomViewKey);
+    if (existingCustomView != nil) {
+        [UIView animateWithDuration:CSToastFadeDuration
+                              delay:0.0
+                            options:(UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionBeginFromCurrentState)
+                         animations:^{
+                             existingCustomView.alpha = 0.0;
+                         } completion:^(BOOL finished) {
+                             [existingCustomView removeFromSuperview];
+                             objc_setAssociatedObject (self, &CSToastCoustomViewKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                         }];
+    }
+
+}
+
 #pragma mark - Activity Methods
 
 - (void)makeToastActivity:(id)position {
@@ -417,7 +439,7 @@ static const NSTimeInterval CSToastFadeDuration     = 0.2;
         CGRect boundingRect = [string boundingRectWithSize:constrainedSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
         return CGSizeMake(ceilf(boundingRect.size.width), ceilf(boundingRect.size.height));
     }
-
+    
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     return [string sizeWithFont:font constrainedToSize:constrainedSize lineBreakMode:lineBreakMode];
@@ -552,3 +574,5 @@ static const NSTimeInterval CSToastFadeDuration     = 0.2;
 }
 
 @end
+
+

@@ -116,5 +116,9 @@
     
 }
 
+-(void)NetWorkIsWWAN{
+    NSLog(@"login wwan");
+}
+
 
 @end

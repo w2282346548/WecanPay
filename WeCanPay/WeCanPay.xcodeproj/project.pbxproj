@@ -12,6 +12,8 @@
 		7118977B1C85800A0095EFDD /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711897791C85800A0095EFDD /* ChooseViewController.m */; };
 		7118977C1C85800A0095EFDD /* ChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7118977A1C85800A0095EFDD /* ChooseViewController.xib */; };
 		711897801C8595C00095EFDD /* UIScrollView+UITouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118977F1C8595C00095EFDD /* UIScrollView+UITouchEvent.m */; };
+		716470491C8FB44300DD2096 /* LORToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 716470481C8FB44300DD2096 /* LORToast.m */; };
+		7164704C1C8FF8AA00DD2096 /* LORCustomMsgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7164704B1C8FF8AA00DD2096 /* LORCustomMsgView.m */; };
 		7193396B1C7E872E009B4D7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7193396A1C7E872E009B4D7B /* main.m */; };
 		7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7193396D1C7E872E009B4D7B /* AppDelegate.m */; };
 		719339761C7E872E009B4D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719339751C7E872E009B4D7B /* Assets.xcassets */; };
@@ -57,6 +59,11 @@
 		7118977A1C85800A0095EFDD /* ChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseViewController.xib; sourceTree = "<group>"; };
 		7118977E1C8595C00095EFDD /* UIScrollView+UITouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+UITouchEvent.h"; sourceTree = "<group>"; };
 		7118977F1C8595C00095EFDD /* UIScrollView+UITouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+UITouchEvent.m"; sourceTree = "<group>"; };
+		716470461C8FAE3000DD2096 /* LORNetStateDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LORNetStateDelegate.h; sourceTree = "<group>"; };
+		716470471C8FB44300DD2096 /* LORToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORToast.h; sourceTree = "<group>"; };
+		716470481C8FB44300DD2096 /* LORToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORToast.m; sourceTree = "<group>"; };
+		7164704A1C8FF8AA00DD2096 /* LORCustomMsgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORCustomMsgView.h; sourceTree = "<group>"; };
+		7164704B1C8FF8AA00DD2096 /* LORCustomMsgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORCustomMsgView.m; sourceTree = "<group>"; };
 		719339661C7E872D009B4D7B /* WeCanPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCanPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7193396A1C7E872E009B4D7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7193396C1C7E872E009B4D7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +151,7 @@
 			children = (
 				711236B51C8EAB2B00ADE70C /* LORNetWorkManager.h */,
 				711236B61C8EAB2B00ADE70C /* LORNetWorkManager.m */,
+				716470461C8FAE3000DD2096 /* LORNetStateDelegate.h */,
 			);
 			name = LorNetTool;
 			sourceTree = "<group>";
@@ -223,6 +231,10 @@
 				71D093561C83D7B8003E27FC /* GVUserDefaults */,
 				71CBC6621C802E6500C06D59 /* TLCityPicker */,
 				719339821C7E8E88009B4D7B /* ZYBannerView */,
+				716470471C8FB44300DD2096 /* LORToast.h */,
+				716470481C8FB44300DD2096 /* LORToast.m */,
+				7164704A1C8FF8AA00DD2096 /* LORCustomMsgView.h */,
+				7164704B1C8FF8AA00DD2096 /* LORCustomMsgView.m */,
 			);
 			name = ThridLib;
 			sourceTree = "<group>";
@@ -492,7 +504,9 @@
 				7193398D1C7E8E88009B4D7B /* ZYBannerView.m in Sources */,
 				7193399C1C7EBD8F009B4D7B /* ProductConfig.m in Sources */,
 				71CBC6731C802E6500C06D59 /* TLCityPickerController.m in Sources */,
+				7164704C1C8FF8AA00DD2096 /* LORCustomMsgView.m in Sources */,
 				71CBC6721C802E6500C06D59 /* TLCityHeaderView.m in Sources */,
+				716470491C8FB44300DD2096 /* LORToast.m in Sources */,
 				7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */,
 				7193398B1C7E8E88009B4D7B /* ZYBannerFooter.m in Sources */,
 				71D0935C1C83D84B003E27FC /* GVUserDefaults+Properties.m in Sources */,

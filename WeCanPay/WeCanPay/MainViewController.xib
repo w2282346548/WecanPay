@@ -35,7 +35,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyg-Og-X56">
-                                            <rect key="frame" x="107" y="117" width="160" height="30"/>
+                                            <rect key="frame" x="107" y="140" width="160" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="EHm-yM-Rjd"/>
                                                 <constraint firstAttribute="width" constant="160" id="uZ3-X3-IkC"/>
@@ -50,7 +50,7 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.40613769589999998" green="0.91083096590000001" blue="0.51773082120000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="Jyg-Og-X56" secondAttribute="bottom" constant="43" id="dpO-59-yPa"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jyg-Og-X56" secondAttribute="bottom" constant="20" id="dpO-59-yPa"/>
                                         <constraint firstAttribute="width" secondItem="qc9-i3-vIu" secondAttribute="height" multiplier="75:38" id="r7u-Ug-bcm"/>
                                         <constraint firstItem="Jyg-Og-X56" firstAttribute="centerX" secondItem="qc9-i3-vIu" secondAttribute="centerX" id="xc1-Pj-UTs"/>
                                     </constraints>

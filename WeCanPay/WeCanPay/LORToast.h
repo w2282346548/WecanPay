@@ -43,6 +43,11 @@ extern const NSString * CSToastPositionBottom;
  */
 @interface UIView (Toast)
 
+
+- (void)hideToastCustomView ;
+-(void)makeToastWithCustomView:(UIView *)customView WithPosition:(id)position;
+
+
 /**
  Creates and presents a new toast view with a message and displays it with the
  default duration and position. Styled using the shared style.
@@ -58,7 +63,7 @@ extern const NSString * CSToastPositionBottom;
  @param message The message to be displayed
  @param duration The toast duration
  @param position The toast's center point. Can be one of the predefined CSToastPosition
-                 constants or a `CGPoint` wrapped in an `NSValue` object.
+ constants or a `CGPoint` wrapped in an `NSValue` object.
  */
 - (void)makeToast:(NSString *)message
          duration:(NSTimeInterval)duration
@@ -82,18 +87,18 @@ extern const NSString * CSToastPositionBottom;
 /**
  Creates and presents a new toast view with a message, title, and image. Duration,
  position, and style can be set explicitly. The completion block executes when the
- toast view completes. `didTap` will be `YES` if the toast view was dismissed from 
+ toast view completes. `didTap` will be `YES` if the toast view was dismissed from
  a tap.
  
  @param message The message to be displayed
  @param duration The toast duration
  @param position The toast's center point. Can be one of the predefined CSToastPosition
-                 constants or a `CGPoint` wrapped in an `NSValue` object.
+ constants or a `CGPoint` wrapped in an `NSValue` object.
  @param title The title
  @param image The image
  @param style The style. The shared style will be used when nil
  @param completion The completion block, executed after the toast view disappears.
-                   didTap will be `YES` if the toast view was dismissed from a tap.
+ didTap will be `YES` if the toast view was dismissed from a tap.
  */
 - (void)makeToast:(NSString *)message
          duration:(NSTimeInterval)duration
@@ -133,7 +138,7 @@ extern const NSString * CSToastPositionBottom;
  has no affect on the queueing behavior of the showToast: methods.
  
  @param position The toast's center point. Can be one of the predefined CSToastPosition
-                 constants or a `CGPoint` wrapped in an `NSValue` object.
+ constants or a `CGPoint` wrapped in an `NSValue` object.
  @return The newly created toast view
  */
 - (void)makeToastActivity:(id)position;
@@ -151,16 +156,16 @@ extern const NSString * CSToastPositionBottom;
 - (void)showToast:(UIView *)toast;
 
 /**
- Displays any view as toast at a provided position and duration. The completion block 
- executes when the toast view completes. `didTap` will be `YES` if the toast view was 
+ Displays any view as toast at a provided position and duration. The completion block
+ executes when the toast view completes. `didTap` will be `YES` if the toast view was
  dismissed from a tap.
  
  @param toast The view to be displayed as toast
  @param duration The notification duration
  @param position The toast's center point. Can be one of the predefined CSToastPosition
-                 constants or a `CGPoint` wrapped in an `NSValue` object.
+ constants or a `CGPoint` wrapped in an `NSValue` object.
  @param completion The completion block, executed after the toast view disappears.
-                   didTap will be `YES` if the toast view was dismissed from a tap.
+ didTap will be `YES` if the toast view was dismissed from a tap.
  */
 - (void)showToast:(UIView *)toast
          duration:(NSTimeInterval)duration
@@ -170,7 +175,7 @@ extern const NSString * CSToastPositionBottom;
 @end
 
 /**
- `CSToastStyle` instances define the look and feel for toast views created via the 
+ `CSToastStyle` instances define the look and feel for toast views created via the
  `makeToast:` methods as well for toast views created directly with
  `toastViewForMessage:title:image:style:`.
  
@@ -373,7 +378,7 @@ extern const NSString * CSToastPositionBottom;
  Returns the default duration. Default is 3.0.
  
  @return duration The toast duration
-*/
+ */
 + (NSTimeInterval)defaultDuration;
 
 /**
