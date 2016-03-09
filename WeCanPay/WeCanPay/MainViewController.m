@@ -45,6 +45,8 @@
     [self initheaderView];//初始化头部
     [self initfunctionView];//初始化九宫格
     [self initbannerView];//初始化广告
+    
+    self.navigationController.navigationBar.barStyle=UIBarStyleBlack;
 
 }
 -(void)initNavBar{

@@ -26,21 +26,26 @@
     [self initNavBar];
     [self initInputView];
     [self initBtnLogin];
-    
+     self.navigationController.navigationBar.barStyle=UIBarStyleBlack;
 
 }
 -(void)initNavBar{
     LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
     d.barAlpha = 1.f;
-    d.barColor=HexRGBAlpha(0x02C874, 1);
-    
+    d.barColor=HexRGBAlpha(0x48d7b1, 1);
+    [d.navigationBar setTitleTextAttributes:@{
+                                              NSFontAttributeName:[UIFont systemFontOfSize:19.f],
+                                              NSForegroundColorAttributeName:[UIColor whiteColor]
+                                              }];
     [self setTitle:@"登录"];
     
-    UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 40)];
     leftbutton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [leftbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [leftbutton setTitle:@"返回" forState:UIControlStateNormal];
+    [leftbutton.titleLabel setFont:[UIFont systemFontOfSize:19.0]];
+    [leftbutton setImage:[UIImage imageNamed:@"arrowdown"] forState:UIControlStateNormal];
     
-    [leftbutton setBackgroundImage:[UIImage imageNamed:@"nav_left"] forState:UIControlStateNormal];
     [leftbutton addTarget:self action:@selector(NavLeftClick) forControlEvents:UIControlEventTouchDown];
     UIBarButtonItem *left=[[UIBarButtonItem alloc]initWithCustomView:leftbutton];
     
@@ -48,6 +53,8 @@
     
     
     UIBarButtonItem *right=[[UIBarButtonItem alloc]initWithTitle:@"注册" style:UIBarButtonItemStyleDone target:self action:@selector(NavRightClick)];
+    [right setTitleTextAttributes:@{  NSFontAttributeName:[UIFont systemFontOfSize:19.f],
+                                    NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
     [self.navigationItem setRightBarButtonItem:right];
 
 }
@@ -92,6 +99,12 @@
     
     
 
+}
+
+
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 
