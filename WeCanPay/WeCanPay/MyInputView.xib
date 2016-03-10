@@ -29,9 +29,10 @@
                     </constraints>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="85r-TR-1Fl">
-                    <rect key="frame" x="46" y="10" width="236" height="30"/>
+                    <rect key="frame" x="52" y="5" width="226" height="40"/>
+                    <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="fif-0W-0jE"/>
+                        <constraint firstAttribute="height" constant="40" id="fif-0W-0jE"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -53,20 +54,31 @@
                         <constraint firstAttribute="height" constant="1" id="Oe9-NI-XAC"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1L-wn-ZBd" userLabel="shuline">
+                    <rect key="frame" x="43" y="10" width="1" height="30"/>
+                    <color key="backgroundColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="8rN-CJ-RoW"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="7AA-I4-bFd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2ak-iw-oMd"/>
                 <constraint firstAttribute="trailing" secondItem="SfN-Kn-WhY" secondAttribute="trailing" id="CIO-Co-EQW"/>
                 <constraint firstAttribute="bottom" secondItem="SfN-Kn-WhY" secondAttribute="bottom" id="Cm8-p8-SET"/>
+                <constraint firstAttribute="bottom" secondItem="k1L-wn-ZBd" secondAttribute="bottom" constant="10" id="J6p-Yc-G1n"/>
+                <constraint firstItem="k1L-wn-ZBd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="JiU-z1-4qs"/>
                 <constraint firstItem="SfN-Kn-WhY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="L7L-Fj-mXa"/>
                 <constraint firstAttribute="trailing" secondItem="gt4-Yy-EQe" secondAttribute="trailing" constant="15" id="Ozp-s1-rbi"/>
-                <constraint firstItem="gt4-Yy-EQe" firstAttribute="leading" secondItem="85r-TR-1Fl" secondAttribute="trailing" constant="1" id="PxG-yc-l5B"/>
+                <constraint firstItem="gt4-Yy-EQe" firstAttribute="leading" secondItem="85r-TR-1Fl" secondAttribute="trailing" constant="5" id="PxG-yc-l5B"/>
                 <constraint firstItem="85r-TR-1Fl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QhI-9u-Yjf"/>
+                <constraint firstItem="k1L-wn-ZBd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Tmc-BC-9Lh"/>
                 <constraint firstItem="gt4-Yy-EQe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="1" id="ez3-WU-GvJ"/>
-                <constraint firstItem="85r-TR-1Fl" firstAttribute="leading" secondItem="Isl-5m-zi8" secondAttribute="trailing" constant="11" id="fif-1i-jLy"/>
                 <constraint firstItem="Isl-5m-zi8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="khU-Ie-neh"/>
+                <constraint firstItem="k1L-wn-ZBd" firstAttribute="leading" secondItem="Isl-5m-zi8" secondAttribute="trailing" constant="8" id="l0j-Fs-XUz"/>
                 <constraint firstItem="Isl-5m-zi8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sfg-0y-0SQ"/>
+                <constraint firstItem="85r-TR-1Fl" firstAttribute="leading" secondItem="k1L-wn-ZBd" secondAttribute="trailing" constant="8" id="uCj-qF-On2"/>
                 <constraint firstItem="7AA-I4-bFd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="yY9-cH-4Dy"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

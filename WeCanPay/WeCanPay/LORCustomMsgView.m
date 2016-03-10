@@ -33,6 +33,18 @@
     return self;
 }
 
++(instancetype)shareLorView{
+    
+    static  LORCustomMsgView *manager=nil;
+    static dispatch_once_t pred;
+    dispatch_once(&pred, ^{
+        manager=[[self alloc] init];
+    });
+    
+    return manager;
+    
+}
+
 -(void)initView{
     [self setBackgroundColor:[UIColor clearColor]];
     self.bgView=[[UIView alloc]init];
@@ -142,5 +154,53 @@
     return _rightImageStr;
 }
 
+
+@end
+
+@interface LORCustomMsgViewManager()
+
+@end
+
+@implementation LORCustomMsgViewManager
+
++(instancetype)sharedManager{
+    
+    static  LORCustomMsgViewManager *manager=nil;
+    static dispatch_once_t pred;
+    dispatch_once(&pred, ^{
+        manager=[[self alloc] init];
+        [manager initLorCustomerView];
+    });
+    
+    return manager;}
+
+-(void)initLorCustomerView{
+
+   _lorMsgview=[[LORCustomMsgView alloc]init];
+   // [_lorMsgview initView];
+    
+}
+
+-(void)ShowWithMsg:(NSString *)msg {
+
+    
+    _lorMsgview.leftImageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed: _lorMsgview.leftImageStr]];
+     _lorMsgview.rightImageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed: _lorMsgview.rightImageStr]];
+    [ _lorMsgview.detailTitle setText: msg];
+//    [ _lorMsgview.superview layoutIfNeeded];
+//    [UIView animateWithDuration:1.f delay:0.1f options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationCurveEaseOut animations:^{
+//        
+//        [ _lorMsgview mas_updateConstraints:^(MASConstraintMaker *make) {
+//            
+//            make.centerX.equalTo( _lorMsgview.superview.mas_centerX);
+//        }];
+//        [ _lorMsgview.superview layoutIfNeeded];
+//    } completion:^(BOOL finished) {
+//        if ( _lorMsgview.isAutoDismiss) {
+//            //[ _lorMsgview hide];
+//        }
+//    }];
+
+}
 
 @end

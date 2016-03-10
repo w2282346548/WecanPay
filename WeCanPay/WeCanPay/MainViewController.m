@@ -18,6 +18,7 @@
 #import "LoginViewController.h"
 #import "PayViewController.h"
 #import "ChooseViewController.h"
+#import "LORCustomMsgView.h"
 
 @interface MainViewController ()<ZYBannerViewDataSource, ZYBannerViewDelegate,TLCityPickerDelegate>
 
@@ -235,5 +236,12 @@
     }
   
 }
+
+-(void)NetWorkIsNo{
+[self ShowMsg:@"没有网络，请连接网络"];
+
+}
+-(void)NetWorkIsWWAN{}
+-(void)NetWorkIsWIFI{}
 
 @end

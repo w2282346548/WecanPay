@@ -39,12 +39,22 @@
                                               }];
     [self setTitle:@"登录"];
     
-    UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 40)];
+    UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 40)];
     leftbutton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [leftbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [leftbutton setTitle:@"返回" forState:UIControlStateNormal];
-    [leftbutton.titleLabel setFont:[UIFont systemFontOfSize:19.0]];
-    [leftbutton setImage:[UIImage imageNamed:@"arrowdown"] forState:UIControlStateNormal];
+    [leftbutton.titleLabel setFont:[UIFont systemFontOfSize:16.0]];
+    [leftbutton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
+   
+    UIImageView *imageview= [[UIImageView alloc]init];
+    [imageview setImage:[UIImage imageNamed:@"fanhui"]];
+    [leftbutton addSubview:imageview];
+    [imageview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(15);
+        make.height.mas_equalTo(20);
+        make.centerY.mas_equalTo(leftbutton);
+        make.left.mas_equalTo(leftbutton);
+    }];
     
     [leftbutton addTarget:self action:@selector(NavLeftClick) forControlEvents:UIControlEventTouchDown];
     UIBarButtonItem *left=[[UIBarButtonItem alloc]initWithCustomView:leftbutton];
@@ -53,7 +63,7 @@
     
     
     UIBarButtonItem *right=[[UIBarButtonItem alloc]initWithTitle:@"注册" style:UIBarButtonItemStyleDone target:self action:@selector(NavRightClick)];
-    [right setTitleTextAttributes:@{  NSFontAttributeName:[UIFont systemFontOfSize:19.f],
+    [right setTitleTextAttributes:@{  NSFontAttributeName:[UIFont systemFontOfSize:16.f],
                                     NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
     [self.navigationItem setRightBarButtonItem:right];
 
@@ -129,9 +139,6 @@
     
 }
 
--(void)NetWorkIsWWAN{
-    NSLog(@"login wwan");
-}
 
 
 @end

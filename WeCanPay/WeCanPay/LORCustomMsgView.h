@@ -19,7 +19,17 @@
 
 @property(nonatomic)BOOL isAutoDismiss;
 
-
++(instancetype)shareLorView;
 -(void)show;
 -(void)hide;
+@end
+
+
+
+@interface LORCustomMsgViewManager:NSObject
+@property(nonatomic)LORCustomMsgView *lorMsgview;
+
++(instancetype)sharedManager;
+-(void)ShowWithMsg:(NSString *)msg;
+-(void)initLorCustomerView;
 @end

@@ -30,11 +30,12 @@
     [self.impic setImage:[UIImage imageNamed:model.icpic]];
     if (model.ispassword) {
         [self.tfMsg setSecureTextEntry:YES];
-         [self.btnFun setImage:[UIImage imageNamed:@"eyenormal"] forState:UIControlStateNormal];
+        [self.btnFun setHidden:YES];
+       //  [self.btnFun setImage:[UIImage imageNamed:@"eyenormal"] forState:UIControlStateNormal];
 //        [self.btnFun setBackgroundImage:[UIImage imageNamed:@"eyenormal"] forState:UIControlStateNormal];
-        [self.btnFun addTarget:self action:@selector(passwordFun) forControlEvents:UIControlEventTouchDown];
+       // [self.btnFun addTarget:self action:@selector(passwordFun) forControlEvents:UIControlEventTouchDown];
     }else{
-        [self.btnFun addTarget:self action:@selector(downFun) forControlEvents:UIControlEventTouchDown];
+       // [self.btnFun addTarget:self action:@selector(downFun) forControlEvents:UIControlEventTouchDown];
         
     }
     
