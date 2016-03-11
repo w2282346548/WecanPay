@@ -56,27 +56,27 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sZ-vK-RyD">
-                                    <rect key="frame" x="0.0" y="180" width="375" height="140"/>
+                                    <rect key="frame" x="0.0" y="520" width="375" height="140"/>
                                     <color key="backgroundColor" red="0.33333333329999998" green="0.68235294120000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="2sZ-vK-RyD" secondAttribute="height" multiplier="131:49" id="xHx-ZI-Yp2"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNt-Bg-jEx">
-                                    <rect key="frame" x="0.0" y="327" width="375" height="340"/>
+                                    <rect key="frame" x="0.0" y="180" width="375" height="332"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-j7-qds" userLabel="ranqifeiView" customClass="UIControl">
-                                            <rect key="frame" x="251" y="1" width="124" height="112"/>
+                                            <rect key="frame" x="251" y="1" width="124" height="110"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ranqifei" translatesAutoresizingMaskIntoConstraints="NO" id="tQy-aK-F0J">
-                                                    <rect key="frame" x="47" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="47" y="30" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="2A6-Ou-8sW"/>
                                                         <constraint firstAttribute="width" secondItem="tQy-aK-F0J" secondAttribute="height" multiplier="1:1" id="KGO-CI-0ew"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="燃气费" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6D-me-tOd">
-                                                    <rect key="frame" x="0.0" y="66" width="124" height="21"/>
+                                                    <rect key="frame" x="0.0" y="65" width="124" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="unb-U2-Gm7"/>
                                                     </constraints>
@@ -99,17 +99,17 @@
                                             </connections>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-3P-Dy7" userLabel="dianfeiView">
-                                            <rect key="frame" x="0.0" y="114" width="124" height="113"/>
+                                            <rect key="frame" x="0.0" y="112" width="124" height="109"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dianfei" translatesAutoresizingMaskIntoConstraints="NO" id="YeW-rQ-MMO">
-                                                    <rect key="frame" x="47" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="47" y="29" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="YeW-rQ-MMO" secondAttribute="height" multiplier="1:1" id="Xkj-VI-O0E"/>
                                                         <constraint firstAttribute="width" constant="30" id="ywr-02-gwj"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电费" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYw-Nl-sQj">
-                                                    <rect key="frame" x="0.0" y="66" width="124" height="21"/>
+                                                    <rect key="frame" x="0.0" y="64" width="124" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="guF-37-F4x"/>
                                                     </constraints>
@@ -129,17 +129,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8t-fg-2dE" userLabel="wuyefeiView">
-                                            <rect key="frame" x="125" y="114" width="125" height="113"/>
+                                            <rect key="frame" x="125" y="112" width="125" height="109"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wuye" translatesAutoresizingMaskIntoConstraints="NO" id="NTi-fF-EVJ">
-                                                    <rect key="frame" x="47" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="47" y="29" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="NTi-fF-EVJ" secondAttribute="height" multiplier="1:1" id="E7m-5G-iJZ"/>
                                                         <constraint firstAttribute="width" constant="30" id="XE8-KD-9Na"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物业费" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0M-dx-LE1">
-                                                    <rect key="frame" x="0.0" y="66" width="125" height="21"/>
+                                                    <rect key="frame" x="0.0" y="64" width="125" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="IME-BE-w3h"/>
                                                     </constraints>
@@ -159,17 +159,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChF-Ok-BCa" userLabel="wulianwangView">
-                                            <rect key="frame" x="251" y="114" width="124" height="113"/>
+                                            <rect key="frame" x="251" y="112" width="124" height="109"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wulianwangkongzhi" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-rm-ubw">
-                                                    <rect key="frame" x="47" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="47" y="29" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="MbI-MW-CJz"/>
                                                         <constraint firstAttribute="width" secondItem="6U3-rm-ubw" secondAttribute="height" multiplier="1:1" id="RhN-Es-rBu"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物联网控制" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-ky-gkC">
-                                                    <rect key="frame" x="0.0" y="66" width="124" height="21"/>
+                                                    <rect key="frame" x="0.0" y="64" width="124" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="TgW-23-HTb"/>
                                                     </constraints>
@@ -189,17 +189,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUE-UW-Gya" userLabel="lishizhangdanView">
-                                            <rect key="frame" x="0.0" y="228" width="124" height="112"/>
+                                            <rect key="frame" x="0.0" y="222" width="124" height="110"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lishi" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-g0-m3v">
-                                                    <rect key="frame" x="47" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="47" y="30" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Qdl-g0-m3v" secondAttribute="height" multiplier="1:1" id="XbZ-Ri-W4R"/>
                                                         <constraint firstAttribute="width" constant="30" id="vUX-U6-Pe5"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="历史账单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEN-CC-GYM">
-                                                    <rect key="frame" x="0.0" y="65" width="124" height="21"/>
+                                                    <rect key="frame" x="0.0" y="64" width="124" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="t9w-AN-FC1"/>
                                                     </constraints>
@@ -219,17 +219,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yh-fE-zaC" userLabel="jiaofeijiluView">
-                                            <rect key="frame" x="125" y="228" width="125" height="112"/>
+                                            <rect key="frame" x="125" y="222" width="125" height="110"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiaofeijilu" translatesAutoresizingMaskIntoConstraints="NO" id="cPe-OW-AUG">
-                                                    <rect key="frame" x="48" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="48" y="30" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="Mu7-A9-Mdw"/>
                                                         <constraint firstAttribute="width" secondItem="cPe-OW-AUG" secondAttribute="height" multiplier="1:1" id="lsk-hf-ws9"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="缴费记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-HV-fWP">
-                                                    <rect key="frame" x="0.0" y="65" width="125" height="21"/>
+                                                    <rect key="frame" x="0.0" y="64" width="125" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="OU9-7A-iFR"/>
                                                     </constraints>
@@ -249,17 +249,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shZ-hW-UcR" userLabel="zaixiankefuView">
-                                            <rect key="frame" x="251" y="228" width="124" height="112"/>
+                                            <rect key="frame" x="251" y="222" width="124" height="110"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zaixiankefu" translatesAutoresizingMaskIntoConstraints="NO" id="4th-ZR-pwh">
-                                                    <rect key="frame" x="47" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="47" y="30" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="4th-ZR-pwh" secondAttribute="height" multiplier="1:1" id="oxm-Zw-pet"/>
                                                         <constraint firstAttribute="width" constant="30" id="wsB-C5-VLW"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在线客服" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9q-fs-O5n">
-                                                    <rect key="frame" x="0.0" y="65" width="124" height="21"/>
+                                                    <rect key="frame" x="0.0" y="64" width="124" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Pr5-Sc-Bu9"/>
                                                     </constraints>
@@ -280,17 +280,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsv-Vn-SgJ" userLabel="shuifeiView">
-                                            <rect key="frame" x="0.0" y="1" width="124" height="112"/>
+                                            <rect key="frame" x="0.0" y="1" width="124" height="110"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shuifei" translatesAutoresizingMaskIntoConstraints="NO" id="xKE-nt-l0d">
-                                                    <rect key="frame" x="47" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="47" y="30" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="xKE-nt-l0d" secondAttribute="height" multiplier="1:1" id="7W4-mf-bgf"/>
                                                         <constraint firstAttribute="width" constant="30" id="CnK-mg-Lms"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水费" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYF-qE-pya">
-                                                    <rect key="frame" x="0.0" y="66" width="124" height="21"/>
+                                                    <rect key="frame" x="0.0" y="65" width="124" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="IJY-Y1-VfF"/>
                                                     </constraints>
@@ -310,17 +310,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87n-At-S3C" userLabel="refeiView">
-                                            <rect key="frame" x="125" y="1" width="125" height="112"/>
+                                            <rect key="frame" x="125" y="1" width="125" height="110"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refei" translatesAutoresizingMaskIntoConstraints="NO" id="p97-ge-xih">
-                                                    <rect key="frame" x="48" y="31" width="30" height="30"/>
+                                                    <rect key="frame" x="48" y="30" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="dNv-5i-lCt"/>
                                                         <constraint firstAttribute="width" secondItem="p97-ge-xih" secondAttribute="height" multiplier="1:1" id="eqL-fo-fsO"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热费" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF3-Ic-oTN">
-                                                    <rect key="frame" x="0.0" y="66" width="125" height="21"/>
+                                                    <rect key="frame" x="0.0" y="65" width="125" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="TKw-oK-RQS"/>
                                                     </constraints>
@@ -340,7 +340,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="ChF-Ok-BCa" firstAttribute="width" secondItem="wO7-3P-Dy7" secondAttribute="width" id="0GE-PP-9lO"/>
                                         <constraint firstAttribute="trailing" secondItem="shZ-hW-UcR" secondAttribute="trailing" id="3oQ-XC-GyP"/>
@@ -391,8 +391,11 @@
                                 <constraint firstAttribute="trailing" secondItem="qc9-i3-vIu" secondAttribute="trailing" id="BvW-KL-cO0"/>
                                 <constraint firstAttribute="bottom" secondItem="fNt-Bg-jEx" secondAttribute="bottom" id="CWU-k2-Qf3"/>
                                 <constraint firstItem="qc9-i3-vIu" firstAttribute="top" secondItem="ph9-WM-vuy" secondAttribute="top" id="HDL-ep-vyS"/>
+                                <constraint firstItem="2sZ-vK-RyD" firstAttribute="top" secondItem="fNt-Bg-jEx" secondAttribute="bottom" constant="8" id="IaU-gL-HZU"/>
                                 <constraint firstAttribute="trailing" secondItem="2sZ-vK-RyD" secondAttribute="trailing" id="T98-L1-ssQ"/>
                                 <constraint firstItem="fNt-Bg-jEx" firstAttribute="leading" secondItem="ph9-WM-vuy" secondAttribute="leading" id="a0C-KF-mOa"/>
+                                <constraint firstItem="fNt-Bg-jEx" firstAttribute="top" secondItem="qc9-i3-vIu" secondAttribute="bottom" id="bFf-D7-R79"/>
+                                <constraint firstAttribute="bottom" secondItem="2sZ-vK-RyD" secondAttribute="bottom" constant="7" id="bHG-65-Zl4"/>
                                 <constraint firstItem="fNt-Bg-jEx" firstAttribute="top" secondItem="2sZ-vK-RyD" secondAttribute="bottom" constant="7" id="fFu-LV-8mm"/>
                                 <constraint firstItem="2sZ-vK-RyD" firstAttribute="leading" secondItem="ph9-WM-vuy" secondAttribute="leading" id="kxQ-ZA-Wk4"/>
                                 <constraint firstItem="qc9-i3-vIu" firstAttribute="leading" secondItem="ph9-WM-vuy" secondAttribute="leading" id="n8q-N6-gaS"/>
@@ -400,6 +403,13 @@
                                 <constraint firstItem="fNt-Bg-jEx" firstAttribute="width" secondItem="qc9-i3-vIu" secondAttribute="width" id="sjR-dX-Ja6"/>
                                 <constraint firstAttribute="trailing" secondItem="fNt-Bg-jEx" secondAttribute="trailing" id="yBY-04-Jvv"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="CWU-k2-Qf3"/>
+                                    <exclude reference="fFu-LV-8mm"/>
+                                    <exclude reference="rMl-hm-6IC"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.28235294117647058" green="0.84313725490196079" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
