@@ -51,20 +51,42 @@
 
 
 - (void)customizeTabBarForController:(RDVTabBarController *)tabBarController {
-    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
-    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"first", @"second"];
+    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background_1"];
+    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background_1"];
+    NSArray *tabBarItemImages = @[@"home", @"mine"];
     NSArray *tabBarItemTitles = @[@"首页", @"我的"];
     
     NSInteger index = 0;
     for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
         [item setTitle:[tabBarItemTitles objectAtIndex:index]];
+        
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
         UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
                                                       [tabBarItemImages objectAtIndex:index]]];
         UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_normal",
                                                         [tabBarItemImages objectAtIndex:index]]];
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+            item.unselectedTitleAttributes = @{
+                                           NSFontAttributeName: [UIFont systemFontOfSize:12],
+                                           NSForegroundColorAttributeName: HexRGBAlpha(0x666666, 1),
+                                           };
+            item.selectedTitleAttributes= @{
+                                            NSFontAttributeName: [UIFont systemFontOfSize:12],
+                                            NSForegroundColorAttributeName: [UIColor whiteColor],
+                                            };
+        } else {
+            #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+            item.unselectedTitleAttributes = @{
+                                               NSFontAttributeName: [UIFont systemFontOfSize:12],
+                                               NSForegroundColorAttributeName: HexRGBAlpha(0x666666, 1),
+                                           };
+            item.selectedTitleAttributes = @{
+                                               UITextAttributeFont: [UIFont systemFontOfSize:12],
+                                               UITextAttributeTextColor: [UIColor whiteColor],
+                                               };
+            #endif
+        }
         
         index++;
     }

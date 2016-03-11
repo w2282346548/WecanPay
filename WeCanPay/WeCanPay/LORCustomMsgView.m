@@ -28,7 +28,6 @@
 -(instancetype)init{
     if (self=[super init]) {
         self.isAutoDismiss=NO;
-        [self initView];
     }
     return self;
 }
@@ -38,14 +37,14 @@
     static  LORCustomMsgView *manager=nil;
     static dispatch_once_t pred;
     dispatch_once(&pred, ^{
-        manager=[[self alloc] init];
+        manager=[[self alloc] initView];
     });
     
     return manager;
     
 }
 
--(void)initView{
+-(instancetype)initView{
     [self setBackgroundColor:[UIColor clearColor]];
     self.bgView=[[UIView alloc]init];
     self.bgView.backgroundColor=HexRGBAlpha(0x000000, 1.0);
@@ -91,7 +90,7 @@
         
     }];
     
-  
+    return self;
 }
 
 -(void)show{

@@ -85,7 +85,7 @@
     }];
 }
 -(void)initheaderView{
-    self.headerView.backgroundColor=HexRGBAlpha(0x02C874, 1);
+    self.headerView.backgroundColor=HexRGBAlpha(0x48d7b1, 1);
     [self.BtnLoginOrReg.layer setMasksToBounds:YES];
     [self.BtnLoginOrReg.layer setCornerRadius:5.0]; //设置矩形四个圆角半径
     [self.BtnLoginOrReg.layer setBorderWidth:1.0]; //边框宽度
