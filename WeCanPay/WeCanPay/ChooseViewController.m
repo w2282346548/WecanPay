@@ -32,7 +32,7 @@
 
     LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
     d.barAlpha = 1.f;
-    d.barColor=HexRGBAlpha(0x02C874, 1);
+    d.barColor=HexRGBAlpha(0x48d7b1, 1);
     
     [self setTitle:@"燃气缴费"];
     
@@ -40,7 +40,7 @@
     leftbutton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [leftbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
-    [leftbutton setBackgroundImage:[UIImage imageNamed:@"nav_left"] forState:UIControlStateNormal];
+    [leftbutton setBackgroundImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateNormal];
     [leftbutton addTarget:self action:@selector(NavLeftClick) forControlEvents:UIControlEventTouchDown];
     UIBarButtonItem *left=[[UIBarButtonItem alloc]initWithCustomView:leftbutton];
     

@@ -102,7 +102,7 @@
     banner.delegate = self;
     banner.shouldLoop=NO;
     banner.autoScroll=YES;
-    banner.scrollInterval=1.5;
+    banner.scrollInterval=3.5;
     [self.bannerView addSubview:banner];
  
     [banner mas_makeConstraints:^(MASConstraintMaker *make) {

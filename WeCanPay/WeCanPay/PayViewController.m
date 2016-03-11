@@ -26,7 +26,7 @@
 -(void)initNavBar{
     LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
     d.barAlpha = 1.f;
-    d.barColor=HexRGBAlpha(0x02C874, 1);
+    d.barColor=HexRGBAlpha(0x48d7b1, 1);
     
     [self setTitle:@"燃气缴费"];
     
