@@ -21,7 +21,7 @@
 -(void) setModel:(MyInputViewModel *)model{
     _model=model;
     
-
+    self.tfMsg.tintColor=HexRGBAlpha(0x48d7b1, 1);
     [self.lbTitle setText:model.title];
     [self.tfMsg setPlaceholder:model.hint];
     [self.btnFun setImage:[UIImage imageNamed:@"arrowdown"] forState:UIControlStateNormal];

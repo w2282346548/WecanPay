@@ -432,11 +432,11 @@
         <image name="dianfei" width="54" height="54"/>
         <image name="jiaofeijilu" width="54" height="54"/>
         <image name="lishi" width="54" height="54"/>
-        <image name="ranqifei" width="54" height="54"/>
+        <image name="ranqifei" width="27" height="27"/>
         <image name="refei" width="54" height="54"/>
         <image name="shuifei" width="54" height="54"/>
-        <image name="wulianwangkongzhi" width="54" height="54"/>
-        <image name="wuye" width="54" height="54"/>
+        <image name="wulianwangkongzhi" width="27" height="27"/>
+        <image name="wuye" width="27" height="27"/>
         <image name="zaixiankefu" width="54" height="54"/>
     </resources>
 </document>

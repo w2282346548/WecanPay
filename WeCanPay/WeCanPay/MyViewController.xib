@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController">
             <connections>
+                <outlet property="tbvMine" destination="huF-MF-Opo" id="Xtr-eb-oEI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +15,30 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhC-uk-yCJ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.28235294117647058" green="0.84313725490196079" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" rowHeight="52" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="huF-MF-Opo">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="separatorColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <color key="sectionIndexColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="huF-MF-Opo" secondAttribute="trailing" id="6Om-ER-tdb"/>
+                <constraint firstItem="uhC-uk-yCJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7i2-Jx-Qyc"/>
+                <constraint firstAttribute="bottom" secondItem="uhC-uk-yCJ" secondAttribute="bottom" id="M5p-CX-loJ"/>
+                <constraint firstItem="huF-MF-Opo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a0H-Mo-yDC"/>
+                <constraint firstItem="uhC-uk-yCJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bFS-XZ-fuU"/>
+                <constraint firstItem="huF-MF-Opo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="iih-xH-KHQ"/>
+                <constraint firstAttribute="trailing" secondItem="uhC-uk-yCJ" secondAttribute="trailing" id="nd7-17-pW1"/>
+                <constraint firstAttribute="bottom" secondItem="huF-MF-Opo" secondAttribute="bottom" id="xbV-IK-oAf"/>
+            </constraints>
         </view>
     </objects>
 </document>

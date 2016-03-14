@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "fanhui.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "shezhi.png",
       "scale" : "2x"
     },
     {

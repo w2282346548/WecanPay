@@ -43,6 +43,7 @@
 		71D093601C83DCA0003E27FC /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D0935F1C83DCA0003E27FC /* DLRadioButton.m */; };
 		71D093641C83E0C3003E27FC /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D093621C83E0C3003E27FC /* PayViewController.m */; };
 		71D093651C83E0C3003E27FC /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D093631C83E0C3003E27FC /* PayViewController.xib */; };
+		71DA5A2C1C968AA50067E218 /* MineInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71DA5A2B1C968AA50067E218 /* MineInfo.plist */; };
 		71E224971C7ED6B60069FCFF /* LORAlphaNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */; };
 		71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E224981C7ED6C40069FCFF /* bigShadow.png */; };
 		71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2249B1C7EDE1C0069FCFF /* MyViewController.m */; };
@@ -116,6 +117,7 @@
 		71D093611C83E0C3003E27FC /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
 		71D093621C83E0C3003E27FC /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		71D093631C83E0C3003E27FC /* PayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
+		71DA5A2B1C968AA50067E218 /* MineInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MineInfo.plist; sourceTree = "<group>"; };
 		71E224951C7ED6B60069FCFF /* LORAlphaNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORAlphaNavController.h; sourceTree = "<group>"; };
 		71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORAlphaNavController.m; sourceTree = "<group>"; };
 		71E224981C7ED6C40069FCFF /* bigShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigShadow.png; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				719339751C7E872E009B4D7B /* Assets.xcassets */,
 				719339771C7E872E009B4D7B /* LaunchScreen.storyboard */,
 				71CBC6851C804D6A00C06D59 /* PrefixHeader.pch */,
+				71DA5A2B1C968AA50067E218 /* MineInfo.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			files = (
 				71E2249E1C7EDE1C0069FCFF /* MyViewController.xib in Resources */,
 				7118977C1C85800A0095EFDD /* ChooseViewController.xib in Resources */,
+				71DA5A2C1C968AA50067E218 /* MineInfo.plist in Resources */,
 				7193398C1C7E8E88009B4D7B /* ZYBannerView.bundle in Resources */,
 				719339791C7E872E009B4D7B /* LaunchScreen.storyboard in Resources */,
 				71CBC66F1C802E6500C06D59 /* CityData.plist in Resources */,
