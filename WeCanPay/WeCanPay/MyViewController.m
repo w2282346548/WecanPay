@@ -8,9 +8,14 @@
 
 #import "MyViewController.h"
 #import "LORAlphaNavController.h"
+#import "LoginViewController.h"
 
 @interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tbvMine;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tbvMineTopConstraint;
+
+@property(strong,nonatomic)UIButton *quit;
+
 @property(strong,nonatomic)NSArray *mineDataSource;
 @end
 
@@ -66,7 +71,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section==0) {
         if (![GVUserDefaults standardUserDefaults].isLogin) {
-            return 170.f;
+            return 190.f;
         }
         return 14.f;
     }
@@ -76,43 +81,53 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *headerView=[[UIView alloc]init];
 
-    if (section==0&&![GVUserDefaults standardUserDefaults].isLogin) {
-        [self setTitle:@""];
-        UIView *bgview=[[UIView alloc]init];
-        bgview.backgroundColor=HexRGBAlpha(0x48d7b1, 1);
-        [headerView addSubview:bgview];
-        [bgview mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.left.top.bottom.equalTo(headerView);
-            
-        }];
+    if (section==0) {
+        if (![GVUserDefaults standardUserDefaults].isLogin) {
+            [self setTitle:@""];
+            UIView *bgview=[[UIView alloc]init];
+            bgview.backgroundColor=HexRGBAlpha(0x48d7b1, 1);
+            [headerView addSubview:bgview];
+            [bgview mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.right.left.top.bottom.equalTo(headerView);
+           
+            }];
+       
+       
+            UIButton *login=[[UIButton alloc]init];
+            [bgview addSubview:login];
+            [login setBackgroundColor:HexRGBAlpha(0x48d7b1, 1)];
+            ViewBorderRadius(login, 3.f, 1.f, HexRGBAlpha(0xffffff, 1));
+            [login setTitle:@"登录/注册" forState:UIControlStateNormal];
+            [login mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@140);
+                make.bottom.equalTo(headerView).offset(-20);
+                make.centerX.equalTo(headerView);
+                make.height.equalTo(@40);
+            }];
+            [login addTarget:self action:@selector(loginIn) forControlEvents:UIControlEventTouchUpInside];
+       
+            UIImageView *photo=[[UIImageView alloc]init];
+            [bgview addSubview:photo];
+            [photo setImage:[UIImage imageNamed:@"tubiao"]];
+            [photo setBackgroundColor:HexRGBAlpha(0x289a7c, 1)];
+            [photo setContentMode:UIViewContentModeCenter];
+            ViewRadius(photo, 39.f);
+            [photo mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(bgview);
+                make.width.height.equalTo(@78);
+                make.bottom.mas_equalTo(login.mas_top).offset(-16);
+           
+            }];
+       
+            self.tbvMineTopConstraint.constant=0.f;
+            LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
+            d.barAlpha = 0.f;
+      
+        }
+        else{
+            self.tbvMineTopConstraint.constant=64.f;
         
-        
-        UIButton *quit=[[UIButton alloc]init];
-        [bgview addSubview:quit];
-        [quit setBackgroundColor:HexRGBAlpha(0x48d7b1, 1)];
-        ViewBorderRadius(quit, 3.f, 1.f, HexRGBAlpha(0xffffff, 1));
-        [quit setTitle:@"登录/注册" forState:UIControlStateNormal];
-        [quit mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.equalTo(@140);
-            make.bottom.equalTo(headerView).offset(-20);
-            make.centerX.equalTo(headerView);
-            make.height.equalTo(@40);
-        }];
-        
-        UIImageView *photo=[[UIImageView alloc]init];
-        [bgview addSubview:photo];
-        [photo setImage:[UIImage imageNamed:@"tubiao"]];
-        [photo setBackgroundColor:HexRGBAlpha(0x289a7c, 1)];
-        [photo setContentMode:UIViewContentModeCenter];
-        ViewRadius(photo, 39.f);
-        [photo mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(bgview);
-            make.width.height.equalTo(@78);
-            make.bottom.mas_equalTo(quit.mas_top).offset(-16);
-            
-        }];
-    
-
+        }
     }
     return headerView;
 }
@@ -129,20 +144,24 @@
     UIView *footView=[[UIView alloc]init];
     
     if (section==self.mineDataSource.count-1) {
-        UIButton *quit=[[UIButton alloc]init];
-        [footView addSubview:quit];
-        [quit setBackgroundColor:HexRGBAlpha(0x48d7b1, 1)];
-        ViewRadius(quit, 3.f);
-        [quit setTitle:@"退出" forState:UIControlStateNormal];
-        [quit addTarget:self action:@selector(loginout) forControlEvents:UIControlEventTouchUpInside];
-        [quit mas_makeConstraints:^(MASConstraintMaker *make) {
+        self.quit=[[UIButton alloc]init];
+        [footView addSubview:self.quit];
+        [self.quit setBackgroundColor:HexRGBAlpha(0x48d7b1, 1)];
+        ViewRadius(self.quit, 3.f);
+        [self.quit setTitle:@"退出" forState:UIControlStateNormal];
+        [self.quit addTarget:self action:@selector(loginout) forControlEvents:UIControlEventTouchUpInside];
+        [self.quit mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(footView).offset(10);
             make.right.equalTo(footView).offset(-10);
             make.top.equalTo(footView).offset(20);
             make.height.equalTo(@40);
         }];
     }
-    
+    if (![GVUserDefaults standardUserDefaults].isLogin) {
+        [self.quit setHidden:YES];
+    }else{
+       [self.quit setHidden:NO];
+    }
     return footView;
 }
 
@@ -178,6 +197,14 @@
 -(void)loginout{
     [GVUserDefaults standardUserDefaults].isLogin=NO;
     [self.tbvMine reloadData];
+}
+
+-(void)loginIn{
+    LoginViewController *login=[[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    LORAlphaNavController *loginNavigationController = [[LORAlphaNavController alloc] initWithRootViewController:login];
+    loginNavigationController.modalPresentationStyle=UIModalPresentationFormSheet;
+    loginNavigationController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    [self presentViewController:loginNavigationController animated:YES completion:nil];
 }
 
 

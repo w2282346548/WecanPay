@@ -65,7 +65,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNt-Bg-jEx">
                                     <rect key="frame" x="0.0" y="327" width="375" height="340"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-j7-qds" userLabel="ranqifeiView" customClass="UIControl">
+                                        <view tag="12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-j7-qds" userLabel="ranqifeiView" customClass="UIControl">
                                             <rect key="frame" x="251" y="1" width="124" height="112"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ranqifei" translatesAutoresizingMaskIntoConstraints="NO" id="tQy-aK-F0J">
@@ -95,10 +95,10 @@
                                                 <constraint firstItem="tQy-aK-F0J" firstAttribute="centerX" secondItem="hnB-j7-qds" secondAttribute="centerX" id="mdi-3n-xCh"/>
                                             </constraints>
                                             <connections>
-                                                <action selector="btnRanqifeiClicked:" destination="-1" eventType="touchUpInside" id="7fr-Wb-a2Y"/>
+                                                <action selector="btnFunClicked:" destination="-1" eventType="touchUpInside" id="dQm-Ze-V4W"/>
                                             </connections>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-3P-Dy7" userLabel="dianfeiView">
+                                        <view tag="13" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-3P-Dy7" userLabel="dianfeiView" customClass="UIControl">
                                             <rect key="frame" x="0.0" y="114" width="124" height="113"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dianfei" translatesAutoresizingMaskIntoConstraints="NO" id="YeW-rQ-MMO">
@@ -127,8 +127,11 @@
                                                 <constraint firstItem="YeW-rQ-MMO" firstAttribute="centerX" secondItem="wO7-3P-Dy7" secondAttribute="centerX" id="JV1-Ww-kM0"/>
                                                 <constraint firstItem="XYw-Nl-sQj" firstAttribute="centerY" secondItem="wO7-3P-Dy7" secondAttribute="centerY" constant="20" id="iPf-Pa-whW"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="btnFunClicked:" destination="-1" eventType="touchUpInside" id="I7O-iD-WSh"/>
+                                            </connections>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8t-fg-2dE" userLabel="wuyefeiView">
+                                        <view tag="14" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8t-fg-2dE" userLabel="wuyefeiView" customClass="UIControl">
                                             <rect key="frame" x="125" y="114" width="125" height="113"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wuye" translatesAutoresizingMaskIntoConstraints="NO" id="NTi-fF-EVJ">
@@ -157,6 +160,9 @@
                                                 <constraint firstItem="z0M-dx-LE1" firstAttribute="centerY" secondItem="i8t-fg-2dE" secondAttribute="centerY" constant="20" id="lEz-lk-pCs"/>
                                                 <constraint firstItem="z0M-dx-LE1" firstAttribute="centerX" secondItem="i8t-fg-2dE" secondAttribute="centerX" id="p4A-RP-BtU"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="btnFunClicked:" destination="-1" eventType="touchUpInside" id="cdp-kQ-CcP"/>
+                                            </connections>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChF-Ok-BCa" userLabel="wulianwangView">
                                             <rect key="frame" x="251" y="114" width="124" height="113"/>
@@ -279,7 +285,7 @@
                                                 <constraint firstItem="V9q-fs-O5n" firstAttribute="leading" secondItem="shZ-hW-UcR" secondAttribute="leading" id="cuh-xu-5xj"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsv-Vn-SgJ" userLabel="shuifeiView">
+                                        <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsv-Vn-SgJ" userLabel="shuifeiView" customClass="UIControl">
                                             <rect key="frame" x="0.0" y="1" width="124" height="112"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shuifei" translatesAutoresizingMaskIntoConstraints="NO" id="xKE-nt-l0d">
@@ -308,8 +314,11 @@
                                                 <constraint firstItem="KYF-qE-pya" firstAttribute="centerY" secondItem="vsv-Vn-SgJ" secondAttribute="centerY" constant="20" id="blz-FA-SvD"/>
                                                 <constraint firstItem="KYF-qE-pya" firstAttribute="leading" secondItem="vsv-Vn-SgJ" secondAttribute="leading" id="kfv-n4-rH1"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="btnFunClicked:" destination="-1" eventType="touchUpInside" id="sqp-HQ-7ls"/>
+                                            </connections>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87n-At-S3C" userLabel="refeiView">
+                                        <view tag="11" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87n-At-S3C" userLabel="refeiView" customClass="UIControl">
                                             <rect key="frame" x="125" y="1" width="125" height="112"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refei" translatesAutoresizingMaskIntoConstraints="NO" id="p97-ge-xih">
@@ -338,9 +347,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="bF3-Ic-oTN" secondAttribute="trailing" id="oxg-7g-ktc"/>
                                                 <constraint firstItem="p97-ge-xih" firstAttribute="centerX" secondItem="87n-At-S3C" secondAttribute="centerX" id="zyu-r6-3w1"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="btnFunClicked:" destination="-1" eventType="touchUpInside" id="Bfj-Xb-RBr"/>
+                                            </connections>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="ChF-Ok-BCa" firstAttribute="width" secondItem="wO7-3P-Dy7" secondAttribute="width" id="0GE-PP-9lO"/>
                                         <constraint firstAttribute="trailing" secondItem="shZ-hW-UcR" secondAttribute="trailing" id="3oQ-XC-GyP"/>
@@ -429,12 +441,12 @@
         </view>
     </objects>
     <resources>
-        <image name="dianfei" width="54" height="54"/>
+        <image name="dianfei" width="27" height="27"/>
         <image name="jiaofeijilu" width="54" height="54"/>
         <image name="lishi" width="54" height="54"/>
         <image name="ranqifei" width="27" height="27"/>
-        <image name="refei" width="54" height="54"/>
-        <image name="shuifei" width="54" height="54"/>
+        <image name="refei" width="27" height="27"/>
+        <image name="shuifei" width="27" height="27"/>
         <image name="wulianwangkongzhi" width="27" height="27"/>
         <image name="wuye" width="27" height="27"/>
         <image name="zaixiankefu" width="54" height="54"/>

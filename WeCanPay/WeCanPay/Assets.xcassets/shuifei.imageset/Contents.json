@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "shuifei.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "shuifei.png",
       "scale" : "2x"
     },
     {

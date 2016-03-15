@@ -12,8 +12,10 @@
 		7118977B1C85800A0095EFDD /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711897791C85800A0095EFDD /* ChooseViewController.m */; };
 		7118977C1C85800A0095EFDD /* ChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7118977A1C85800A0095EFDD /* ChooseViewController.xib */; };
 		711897801C8595C00095EFDD /* UIScrollView+UITouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7118977F1C8595C00095EFDD /* UIScrollView+UITouchEvent.m */; };
+		712534E41C97BDC0005AB9C7 /* ChooseInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 712534E31C97BDC0005AB9C7 /* ChooseInfo.plist */; };
 		716470491C8FB44300DD2096 /* LORToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 716470481C8FB44300DD2096 /* LORToast.m */; };
 		7164704C1C8FF8AA00DD2096 /* LORCustomMsgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7164704B1C8FF8AA00DD2096 /* LORCustomMsgView.m */; };
+		717DDA921C97A42B0026D99A /* ChooseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 717DDA911C97A42B0026D99A /* ChooseViewModel.m */; };
 		7193396B1C7E872E009B4D7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7193396A1C7E872E009B4D7B /* main.m */; };
 		7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7193396D1C7E872E009B4D7B /* AppDelegate.m */; };
 		719339761C7E872E009B4D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719339751C7E872E009B4D7B /* Assets.xcassets */; };
@@ -43,6 +45,10 @@
 		71D093601C83DCA0003E27FC /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D0935F1C83DCA0003E27FC /* DLRadioButton.m */; };
 		71D093641C83E0C3003E27FC /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D093621C83E0C3003E27FC /* PayViewController.m */; };
 		71D093651C83E0C3003E27FC /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D093631C83E0C3003E27FC /* PayViewController.xib */; };
+		71D77C111C97E0240085BB47 /* CompanyChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D77C0F1C97E0240085BB47 /* CompanyChooseViewController.m */; };
+		71D77C121C97E0240085BB47 /* CompanyChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D77C101C97E0240085BB47 /* CompanyChooseViewController.xib */; };
+		71D77C161C97EE490085BB47 /* CompanyChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D77C141C97EE490085BB47 /* CompanyChooseCell.m */; };
+		71D77C171C97EE490085BB47 /* CompanyChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D77C151C97EE490085BB47 /* CompanyChooseCell.xib */; };
 		71DA5A2C1C968AA50067E218 /* MineInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71DA5A2B1C968AA50067E218 /* MineInfo.plist */; };
 		71E224971C7ED6B60069FCFF /* LORAlphaNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */; };
 		71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E224981C7ED6C40069FCFF /* bigShadow.png */; };
@@ -60,11 +66,14 @@
 		7118977A1C85800A0095EFDD /* ChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseViewController.xib; sourceTree = "<group>"; };
 		7118977E1C8595C00095EFDD /* UIScrollView+UITouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+UITouchEvent.h"; sourceTree = "<group>"; };
 		7118977F1C8595C00095EFDD /* UIScrollView+UITouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+UITouchEvent.m"; sourceTree = "<group>"; };
+		712534E31C97BDC0005AB9C7 /* ChooseInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChooseInfo.plist; sourceTree = "<group>"; };
 		716470461C8FAE3000DD2096 /* LORNetStateDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LORNetStateDelegate.h; sourceTree = "<group>"; };
 		716470471C8FB44300DD2096 /* LORToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORToast.h; sourceTree = "<group>"; };
 		716470481C8FB44300DD2096 /* LORToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORToast.m; sourceTree = "<group>"; };
 		7164704A1C8FF8AA00DD2096 /* LORCustomMsgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORCustomMsgView.h; sourceTree = "<group>"; };
 		7164704B1C8FF8AA00DD2096 /* LORCustomMsgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORCustomMsgView.m; sourceTree = "<group>"; };
+		717DDA901C97A42B0026D99A /* ChooseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewModel.h; sourceTree = "<group>"; };
+		717DDA911C97A42B0026D99A /* ChooseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewModel.m; sourceTree = "<group>"; };
 		719339661C7E872D009B4D7B /* WeCanPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCanPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7193396A1C7E872E009B4D7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7193396C1C7E872E009B4D7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +126,12 @@
 		71D093611C83E0C3003E27FC /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
 		71D093621C83E0C3003E27FC /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		71D093631C83E0C3003E27FC /* PayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
+		71D77C0E1C97E0240085BB47 /* CompanyChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyChooseViewController.h; sourceTree = "<group>"; };
+		71D77C0F1C97E0240085BB47 /* CompanyChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyChooseViewController.m; sourceTree = "<group>"; };
+		71D77C101C97E0240085BB47 /* CompanyChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompanyChooseViewController.xib; sourceTree = "<group>"; };
+		71D77C131C97EE490085BB47 /* CompanyChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyChooseCell.h; sourceTree = "<group>"; };
+		71D77C141C97EE490085BB47 /* CompanyChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyChooseCell.m; sourceTree = "<group>"; };
+		71D77C151C97EE490085BB47 /* CompanyChooseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompanyChooseCell.xib; sourceTree = "<group>"; };
 		71DA5A2B1C968AA50067E218 /* MineInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MineInfo.plist; sourceTree = "<group>"; };
 		71E224951C7ED6B60069FCFF /* LORAlphaNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORAlphaNavController.h; sourceTree = "<group>"; };
 		71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORAlphaNavController.m; sourceTree = "<group>"; };
@@ -161,9 +176,12 @@
 		7118977D1C8580380095EFDD /* Choose */ = {
 			isa = PBXGroup;
 			children = (
+				71D77C0D1C97DFF50085BB47 /* CompanyChoose */,
 				711897781C85800A0095EFDD /* ChooseViewController.h */,
 				711897791C85800A0095EFDD /* ChooseViewController.m */,
 				7118977A1C85800A0095EFDD /* ChooseViewController.xib */,
+				717DDA901C97A42B0026D99A /* ChooseViewModel.h */,
+				717DDA911C97A42B0026D99A /* ChooseViewModel.m */,
 			);
 			name = Choose;
 			sourceTree = "<group>";
@@ -208,6 +226,7 @@
 				719339771C7E872E009B4D7B /* LaunchScreen.storyboard */,
 				71CBC6851C804D6A00C06D59 /* PrefixHeader.pch */,
 				71DA5A2B1C968AA50067E218 /* MineInfo.plist */,
+				712534E31C97BDC0005AB9C7 /* ChooseInfo.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -350,6 +369,19 @@
 			name = Pay;
 			sourceTree = "<group>";
 		};
+		71D77C0D1C97DFF50085BB47 /* CompanyChoose */ = {
+			isa = PBXGroup;
+			children = (
+				71D77C0E1C97E0240085BB47 /* CompanyChooseViewController.h */,
+				71D77C0F1C97E0240085BB47 /* CompanyChooseViewController.m */,
+				71D77C101C97E0240085BB47 /* CompanyChooseViewController.xib */,
+				71D77C131C97EE490085BB47 /* CompanyChooseCell.h */,
+				71D77C141C97EE490085BB47 /* CompanyChooseCell.m */,
+				71D77C151C97EE490085BB47 /* CompanyChooseCell.xib */,
+			);
+			name = CompanyChoose;
+			sourceTree = "<group>";
+		};
 		71E224941C7ED6520069FCFF /* AlphaNavController */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,11 +487,14 @@
 				719339791C7E872E009B4D7B /* LaunchScreen.storyboard in Resources */,
 				71CBC66F1C802E6500C06D59 /* CityData.plist in Resources */,
 				71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */,
+				712534E41C97BDC0005AB9C7 /* ChooseInfo.plist in Resources */,
 				71CBC6841C80440000C06D59 /* MyInputView.xib in Resources */,
 				719339981C7EA36B009B4D7B /* MainViewController.xib in Resources */,
 				719339761C7E872E009B4D7B /* Assets.xcassets in Resources */,
 				719339811C7E87C3009B4D7B /* Podfile in Resources */,
 				71CBC67A1C803E6000C06D59 /* LoginViewController.xib in Resources */,
+				71D77C121C97E0240085BB47 /* CompanyChooseViewController.xib in Resources */,
+				71D77C171C97EE490085BB47 /* CompanyChooseCell.xib in Resources */,
 				71D093651C83E0C3003E27FC /* PayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,11 +539,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D77C161C97EE490085BB47 /* CompanyChooseCell.m in Sources */,
 				711236B71C8EAB2B00ADE70C /* LORNetWorkManager.m in Sources */,
 				7193398D1C7E8E88009B4D7B /* ZYBannerView.m in Sources */,
 				7193399C1C7EBD8F009B4D7B /* ProductConfig.m in Sources */,
 				71CBC6731C802E6500C06D59 /* TLCityPickerController.m in Sources */,
 				7164704C1C8FF8AA00DD2096 /* LORCustomMsgView.m in Sources */,
+				717DDA921C97A42B0026D99A /* ChooseViewModel.m in Sources */,
 				71CBC6721C802E6500C06D59 /* TLCityHeaderView.m in Sources */,
 				716470491C8FB44300DD2096 /* LORToast.m in Sources */,
 				7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */,
@@ -518,6 +555,7 @@
 				71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */,
 				71CBC6791C803E6000C06D59 /* LoginViewController.m in Sources */,
 				7118977B1C85800A0095EFDD /* ChooseViewController.m in Sources */,
+				71D77C111C97E0240085BB47 /* CompanyChooseViewController.m in Sources */,
 				7193398A1C7E8E88009B4D7B /* ZYBannerCell.m in Sources */,
 				711897801C8595C00095EFDD /* UIScrollView+UITouchEvent.m in Sources */,
 				71CBC6821C80440000C06D59 /* MyInputViewModel.m in Sources */,

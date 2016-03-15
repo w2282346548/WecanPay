@@ -30,11 +30,22 @@
     
     [self setTitle:@"燃气缴费"];
     
-    UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    UIButton *leftbutton=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 40)];
     leftbutton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [leftbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [leftbutton setTitle:@"返回" forState:UIControlStateNormal];
+    [leftbutton.titleLabel setFont:[UIFont systemFontOfSize:16.0]];
+    [leftbutton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
     
-    [leftbutton setBackgroundImage:[UIImage imageNamed:@"nav_left"] forState:UIControlStateNormal];
+    UIImageView *imageview= [[UIImageView alloc]init];
+    [imageview setImage:[UIImage imageNamed:@"fanhui"]];
+    [leftbutton addSubview:imageview];
+    [imageview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(15);
+        make.height.mas_equalTo(20);
+        make.centerY.mas_equalTo(leftbutton);
+        make.left.mas_equalTo(leftbutton);
+    }];
     [leftbutton addTarget:self action:@selector(NavLeftClick) forControlEvents:UIControlEventTouchDown];
     UIBarButtonItem *left=[[UIBarButtonItem alloc]initWithCustomView:leftbutton];
     

@@ -201,13 +201,29 @@
     
     return nil;
 }
-- (IBAction)btnRanqifeiClicked:(id)sender {
-    NSLog(@"燃气缴费");
+- (IBAction)btnFunClicked:(id)sender {
     BOOL islogin=[GVUserDefaults standardUserDefaults].isLogin;
     if (islogin) {
         ChooseViewController *chooseController=[[ChooseViewController alloc]initWithNibName:@"ChooseViewController" bundle:nil];
-        
-//        [payController setHidesBottomBarWhenPushed:YES];
+        switch (((UIButton *)sender).tag) {
+            case 10:
+                  chooseController.currenctType=ChooseTypeWater;
+                break;
+            case 11:
+                chooseController.currenctType=ChooseTypeHeat;
+                break;
+            case 12:
+                chooseController.currenctType=ChooseTypeGas;
+                break;
+            case 13:
+                chooseController.currenctType=ChooseTypeElectric;
+                break;
+            case 14:
+                chooseController.currenctType=ChooseTypeProperty;
+                break;
+            default:
+                break;
+        }
         [self.navigationController pushViewController:chooseController animated:YES];
         
     }else{
