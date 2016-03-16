@@ -10,6 +10,7 @@
 #import "ChooseViewModel.h"
 
 
+
 typedef NS_ENUM(NSInteger,ChooseType) {
     ChooseTypeWater,
     ChooseTypeHeat,
@@ -22,5 +23,5 @@ typedef NS_ENUM(NSInteger,ChooseType) {
 
 @property(nonatomic,strong)ChooseViewModel *chooseModel;
 @property(nonatomic)ChooseType currenctType;
-
+@property (weak, nonatomic) IBOutlet UILabel *lbCompany;
 @end

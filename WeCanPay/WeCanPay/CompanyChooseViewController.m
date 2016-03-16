@@ -7,12 +7,15 @@
 //
 
 #import "CompanyChooseViewController.h"
+#import "CompanyChooseModel.h"
 #import <UIScrollView+EmptyDataSet.h>
+#import "CompanyChooseCell.h"
+#import "ChooseViewController.h"
 
 @interface CompanyChooseViewController ()<DZNEmptyDataSetDelegate,DZNEmptyDataSetSource,UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tbvCompanys;
-@property(nonatomic)NSMutableArray *otherButtons;
 
+@property(nonatomic)NSIndexPath *currectIndex;
 @end
 
 @implementation CompanyChooseViewController
@@ -23,44 +26,86 @@
     self.tbvCompanys.emptyDataSetSource=self;
     self.tbvCompanys.dataSource=self;
     self.tbvCompanys.delegate=self;
+    self.tbvCompanys.allowsMultipleSelection=NO;
+    self.tbvCompanys.allowsSelection=YES;
     self.tbvCompanys.tableFooterView=[UIView new];
     [self.tbvCompanys registerNib:[UINib nibWithNibName:@"CompanyChooseCell" bundle:nil] forCellReuseIdentifier:@"CompanyChooseCellIdentifier"];
+    
+    
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+//    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:0 inSection:0];
+//    
+//    
+//    if ([self.tbvCompanys.delegate respondsToSelector:@selector(tableView:willSelectRowAtIndexPath:)]) {
+//        [self.tbvCompanys.delegate tableView:self.tbvCompanys willSelectRowAtIndexPath:indexPath];
+//    }
+//    
+//    [self.tbvCompanys selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone
+//     ];
+//    
+//    if ([self.tbvCompanys.delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+//        [self.tbvCompanys.delegate tableView:self.tbvCompanys didSelectRowAtIndexPath:indexPath];
+//    }
 
 
+    
+  
+    
+    
+}
 -(UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
     return [UIImage imageNamed:@"eye"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 15;
+    return self.companysData.count;
+//    return 20;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"CompanyChooseCellIdentifier"];
-     DLRadioButton *btn=cell.contentView.subviews[0];
-    if (indexPath.row==3) {
-       
-        [btn setSelected:YES];
-    }
-    if (indexPath.row!=0) {
-        [self.otherButtons addObject:btn];
-    }
+    CompanyChooseCell *cell =[tableView dequeueReusableCellWithIdentifier:@"CompanyChooseCellIdentifier"];
+    
+    CompanyChooseModel *model=[CompanyChooseModel new];
+    NSDictionary *dict=[self.companysData objectAtIndex:indexPath.row];
+    model.companyName=dict[@"title"];
+    model.companyID=(NSInteger)dict[@"id"];
 
+//    model.companyName=[NSString stringWithFormat:@"title%ld",(long)indexPath.row];
+//    model.companyID=indexPath.row;
 
-        btn.otherButtons=self.otherButtons;
-   
+    cell.model=model;
+    if (indexPath==self.currectIndex) {
+        
+        cell.isSelcet=YES;
+    }else{
+    cell.isSelcet=NO;
+    }
     return cell;
 }
 
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
--(NSMutableArray *)otherButtons{
-    if (!_otherButtons) {
-        _otherButtons=[NSMutableArray new];
+   CompanyChooseCell *cell= [self.tbvCompanys cellForRowAtIndexPath:indexPath];
+    cell.isSelcet=YES;
+    self.currectIndex=indexPath;
+      CompanyChooseModel *model=[CompanyChooseModel new];
+      NSDictionary *dict=[self.companysData objectAtIndex:indexPath.row];
+        model.companyName=dict[@"title"];
+        model.companyID=(NSInteger)dict[@"id"];
+    if (self.companySelectDelegate) {
+        [self.companySelectDelegate CompanySelect:model];
     }
-    return _otherButtons;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
+
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    return indexPath;
+}
+
 @end

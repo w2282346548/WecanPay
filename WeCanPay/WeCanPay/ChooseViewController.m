@@ -11,13 +11,12 @@
 #import "UIScrollView+UITouchEvent.h"
 #import "CompanyChooseViewController.h"
 
-@interface ChooseViewController ()
+@interface ChooseViewController ()<CompanySelectDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *BtnGoNext;
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *imagePic;
-@property (weak, nonatomic) IBOutlet UILabel *lbCompany;
-@property (weak, nonatomic) IBOutlet DLRadioButton *btnCustomCompany;
-@property (weak, nonatomic) IBOutlet DLRadioButton *btnWeiAnCompany;
+
+
 
 @end
 
@@ -28,6 +27,10 @@
     // Do any additional setup after loading the view from its nib.
      [self initNavBar];
     [self initCustomView];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+
 }
 
 
@@ -69,7 +72,7 @@
     [self.lbTitle setText:self.chooseModel.title];
     NSDictionary *dic= [self.chooseModel.companys objectAtIndex:1];
     self.lbCompany.text=[dic objectForKey:@"title"];
-    [self.btnCustomCompany setTitle:self.lbCompany.text forState:UIControlStateNormal];
+//    [self.btnCustomCompany setTitle:self.lbCompany.text forState:UIControlStateNormal];
     
     
     ViewRadius(self.BtnGoNext, 3.f);
@@ -94,10 +97,17 @@
 
 - (IBAction)BtnClicked:(UIControl *)sender {
     CompanyChooseViewController *companyChooseController=[[CompanyChooseViewController alloc]initWithNibName:@"CompanyChooseViewController" bundle:nil];
+    companyChooseController.companySelectDelegate=self;
+    companyChooseController.companysData=[self.chooseModel.companys copy];
       [self.navigationController pushViewController:companyChooseController animated:YES];
 }
 
 
+-(void)CompanySelect:(CompanyChooseModel *)model{
+    NSLog(@"ssss:%@",model.companyName);
+    self.lbCompany.text=model.companyName;
+
+}
 
 
 #pragma marks --geter seter

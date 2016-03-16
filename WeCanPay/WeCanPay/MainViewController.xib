@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="BtnLoginOrReg" destination="Jyg-Og-X56" id="uds-NX-3Fd"/>
+                <outlet property="LoginedView" destination="4Je-aC-4W1" id="RjM-au-7Qv"/>
                 <outlet property="bannerView" destination="2sZ-vK-RyD" id="VLG-J5-1qA"/>
                 <outlet property="bgScrollerView" destination="QxW-y3-vcR" id="aLx-T3-66R"/>
                 <outlet property="functionView" destination="fNt-Bg-jEx" id="ydM-TY-oqz"/>
@@ -47,6 +48,23 @@
                                                 <action selector="BtnLoginOrRegClicked:" destination="-1" eventType="touchUpInside" id="NHK-43-1wA"/>
                                             </connections>
                                         </button>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Je-aC-4W1" userLabel="LoginedView">
+                                            <rect key="frame" x="0.0" y="64" width="375" height="125"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="当前用户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AI7-YX-N23">
+                                                    <rect key="frame" x="13" y="15" width="77" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13282394@qq.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bh-AF-a40">
+                                                    <rect key="frame" x="98" y="15" width="236" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.28235294117647058" green="0.84313725490196079" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>

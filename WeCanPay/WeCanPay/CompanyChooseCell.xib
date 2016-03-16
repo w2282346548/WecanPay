@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcL-Mn-YuC" customClass="DLRadioButton">
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcL-Mn-YuC" customClass="DLRadioButton">
                         <rect key="frame" x="26" y="0.0" width="274" height="43"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title="重庆某某公司">
@@ -46,6 +46,9 @@
                     </view>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="CompanyCell" destination="KcL-Mn-YuC" id="glO-bP-U1Z"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

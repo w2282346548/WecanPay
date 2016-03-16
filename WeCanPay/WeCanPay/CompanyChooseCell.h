@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CompanyChooseModel.h"
 
 @interface CompanyChooseCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet DLRadioButton *CompanyCell;
 
+@property(nonatomic,strong)CompanyChooseModel *model;
+@property(nonatomic)BOOL isSelcet;
 @end

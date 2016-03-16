@@ -50,6 +50,7 @@
 		71D77C161C97EE490085BB47 /* CompanyChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D77C141C97EE490085BB47 /* CompanyChooseCell.m */; };
 		71D77C171C97EE490085BB47 /* CompanyChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D77C151C97EE490085BB47 /* CompanyChooseCell.xib */; };
 		71DA5A2C1C968AA50067E218 /* MineInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71DA5A2B1C968AA50067E218 /* MineInfo.plist */; };
+		71DA92671C99285B0076A76D /* CompanyChooseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DA92661C99285B0076A76D /* CompanyChooseModel.m */; };
 		71E224971C7ED6B60069FCFF /* LORAlphaNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */; };
 		71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E224981C7ED6C40069FCFF /* bigShadow.png */; };
 		71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2249B1C7EDE1C0069FCFF /* MyViewController.m */; };
@@ -133,6 +134,8 @@
 		71D77C141C97EE490085BB47 /* CompanyChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyChooseCell.m; sourceTree = "<group>"; };
 		71D77C151C97EE490085BB47 /* CompanyChooseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompanyChooseCell.xib; sourceTree = "<group>"; };
 		71DA5A2B1C968AA50067E218 /* MineInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MineInfo.plist; sourceTree = "<group>"; };
+		71DA92651C99285B0076A76D /* CompanyChooseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyChooseModel.h; sourceTree = "<group>"; };
+		71DA92661C99285B0076A76D /* CompanyChooseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyChooseModel.m; sourceTree = "<group>"; };
 		71E224951C7ED6B60069FCFF /* LORAlphaNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORAlphaNavController.h; sourceTree = "<group>"; };
 		71E224961C7ED6B60069FCFF /* LORAlphaNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORAlphaNavController.m; sourceTree = "<group>"; };
 		71E224981C7ED6C40069FCFF /* bigShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigShadow.png; sourceTree = "<group>"; };
@@ -378,6 +381,8 @@
 				71D77C131C97EE490085BB47 /* CompanyChooseCell.h */,
 				71D77C141C97EE490085BB47 /* CompanyChooseCell.m */,
 				71D77C151C97EE490085BB47 /* CompanyChooseCell.xib */,
+				71DA92651C99285B0076A76D /* CompanyChooseModel.h */,
+				71DA92661C99285B0076A76D /* CompanyChooseModel.m */,
 			);
 			name = CompanyChoose;
 			sourceTree = "<group>";
@@ -546,6 +551,7 @@
 				71CBC6731C802E6500C06D59 /* TLCityPickerController.m in Sources */,
 				7164704C1C8FF8AA00DD2096 /* LORCustomMsgView.m in Sources */,
 				717DDA921C97A42B0026D99A /* ChooseViewModel.m in Sources */,
+				71DA92671C99285B0076A76D /* CompanyChooseModel.m in Sources */,
 				71CBC6721C802E6500C06D59 /* TLCityHeaderView.m in Sources */,
 				716470491C8FB44300DD2096 /* LORToast.m in Sources */,
 				7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */,

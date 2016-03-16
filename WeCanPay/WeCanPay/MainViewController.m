@@ -21,6 +21,7 @@
 #import "LORCustomMsgView.h"
 
 @interface MainViewController ()<ZYBannerViewDataSource, ZYBannerViewDelegate,TLCityPickerDelegate>
+@property (weak, nonatomic) IBOutlet UIView *LoginedView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *bgScrollerView;
 @property (weak, nonatomic) IBOutlet UIButton *BtnLoginOrReg;
@@ -50,6 +51,22 @@
     self.navigationController.navigationBar.barStyle=UIBarStyleBlack;
 
 }
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    if (self.rdv_tabBarController.isTabBarHidden) {
+        [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
+    }
+    
+    if (![GVUserDefaults standardUserDefaults].isLogin) {
+        [self.LoginedView setHidden:YES];
+        [self.BtnLoginOrReg setHidden:NO];
+    }else{
+        [self.LoginedView setHidden:NO];
+        [self.BtnLoginOrReg setHidden:YES];
+    }
+}
+
 -(void)initNavBar{
     LORAlphaNavController *d= (LORAlphaNavController *)[self navigationController];
     d.barAlpha = 0.f;
@@ -66,10 +83,7 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 
-}
 
 -(void)NavLeftClick{
     NSLog(@"click left");
@@ -94,6 +108,8 @@
     CGColorRef colorref = CGColorCreate(colorSpace,(CGFloat[]){ 1, 1, 1, 1 });
     
     [self.BtnLoginOrReg.layer setBorderColor:colorref];//边框颜色
+    
+
 }
 
 -(void)initbannerView{
@@ -246,12 +262,7 @@
 }
 
 
--(void)viewWillAppear:(BOOL)animated{
-    if (self.rdv_tabBarController.isTabBarHidden) {
-          [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
-    }
-  
-}
+
 
 -(void)NetWorkIsNo{
 [self ShowMsg:@"没有网络，请连接网络"];
