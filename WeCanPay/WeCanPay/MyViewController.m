@@ -9,6 +9,7 @@
 #import "MyViewController.h"
 #import "LORAlphaNavController.h"
 #import "LoginViewController.h"
+#import "BaseWKWebViewController.h"
 
 @interface MyViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tbvMine;
@@ -66,6 +67,13 @@
     
     [self setTitle:@"我的信息"];
     [self.tbvMine reloadData];
+    
+    
+        if (self.rdv_tabBarController.isTabBarHidden) {
+            [[self rdv_tabBarController] setTabBarHidden:NO animated:YES];
+        }
+        
+   
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -188,9 +196,42 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-
-
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [tableView cellForRowAtIndexPath:indexPath];
+    switch (indexPath.section) {
+        case 0:
+        {
+          break;
+        }
+        case 1:
+        {
+          break;
+        }
+        case 2:{//我的客服 关于
+            switch (indexPath.row) {
+                case 0:
+                {
+                    break;
+                }
+                case 1:
+                {
+                    BaseWKWebViewController  *showController=[[BaseWKWebViewController alloc]initWithNibName:@"BaseWKWebViewController" bundle:nil];
+                   
+                    showController.request=@"http://wecanss.com";
+                   
+                    [self.navigationController pushViewController:showController animated:YES];
+                    break;
+                }
+                default:
+                    break;
+            }
+            }
+            break;
+        default:
+            break;
+    }
+
 }
 
 

@@ -10,9 +10,10 @@
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 #import "LORToast.h"
 #import "LORCustomMsgView.h"
+#import "LORMessage.h"
 
 
-@interface BaseViewController ()<LORNetStateDelegate>
+@interface BaseViewController ()<LORNetStateDelegate,LORMessageViewProtocol>
 @property(nonatomic,strong) LORCustomMsgView *lorMsgview;
 @end
 
@@ -26,6 +27,11 @@
 }
 
 -(void)viewDidLoad{
+    
+    [LORMessage setDefaultViewController:self];
+    [LORMessage setDelegate:self];
+    
+    
     self.hub=[[MBProgressHUD alloc]init];
     self.hub.mode=MBProgressHUDModeIndeterminate;
     self.hub.detailsLabelText=@"Login....";
@@ -82,12 +88,22 @@
     }
 
 
+-(void)ShowLORMsg:(NSString *)msg{
+    [LORMessage showNotificationInViewController:self title:msg subtitle:nil image:nil type:LORMessageNotificationTypeSuccess duration:LORMessageNotificationDurationEndless callback:nil buttonTitle:nil buttonCallback:nil atPosition:LORMessageNotificationPositionTop canBeDismissedByUser:NO];
 
-
+}
+-(void)DismissLORMsg{
+    [LORMessage dismissActiveNotification];
+}
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
 
 
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [[self rdv_tabBarController] setTabBarHidden:YES animated:YES];
+}
 @end

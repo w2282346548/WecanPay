@@ -10,12 +10,14 @@
 #import "PayViewController.h"
 #import "UIScrollView+UITouchEvent.h"
 #import "CompanyChooseViewController.h"
+#import "BaseWKWebViewController.h"
 
 @interface ChooseViewController ()<CompanySelectDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *BtnGoNext;
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *imagePic;
 
+@property (weak, nonatomic) IBOutlet UILabel *lbProtocol;
 
 
 @end
@@ -70,12 +72,48 @@
 -(void)initCustomView{
     [self.imagePic setImage:[UIImage imageNamed:self.chooseModel.image]];
     [self.lbTitle setText:self.chooseModel.title];
-    NSDictionary *dic= [self.chooseModel.companys objectAtIndex:1];
+    
+    NSInteger index;
+    switch (self.currenctType) {
+        case ChooseTypeWater:
+            index=[GVUserDefaults standardUserDefaults].selectedWaterCompanyIndex;
+            break;
+        case ChooseTypeHeat:
+            index=[GVUserDefaults standardUserDefaults].selectedHeatCompanyIndex;
+            break;
+        case ChooseTypeGas:
+            index=[GVUserDefaults standardUserDefaults].selectedGasCompanyIndex;
+            break;
+        case ChooseTypeElectric:
+            index=[GVUserDefaults standardUserDefaults].selectedElectricCompanyIndex;
+            break;
+        case ChooseTypeProperty:
+            index=[GVUserDefaults standardUserDefaults].selectedPropertyCompanyIndex;
+            break;
+        default:
+            break;
+    }
+
+    NSDictionary *dic= [self.chooseModel.companys objectAtIndex:index];
     self.lbCompany.text=[dic objectForKey:@"title"];
 //    [self.btnCustomCompany setTitle:self.lbCompany.text forState:UIControlStateNormal];
     
     
     ViewRadius(self.BtnGoNext, 3.f);
+    
+    
+    self.lbProtocol.userInteractionEnabled=YES;
+    UITapGestureRecognizer *labelTapGestureRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(labelTouchUpInside:)];
+    [self.lbProtocol addGestureRecognizer:labelTapGestureRecognizer];
+}
+
+-(void)labelTouchUpInside:(UITapGestureRecognizer *)recognizer{
+    
+   BaseWKWebViewController  *protocolController=[[BaseWKWebViewController alloc]initWithNibName:@"BaseWKWebViewController" bundle:nil];
+    NSString *filePath=[[NSBundle mainBundle]pathForResource:@"protocol" ofType:@"html"];
+    protocolController.htmlPath=filePath;
+    [self.navigationController pushViewController:protocolController animated:YES];
+
 
 }
 
@@ -97,6 +135,7 @@
 
 - (IBAction)BtnClicked:(UIControl *)sender {
     CompanyChooseViewController *companyChooseController=[[CompanyChooseViewController alloc]initWithNibName:@"CompanyChooseViewController" bundle:nil];
+    companyChooseController.currenctType=self.currenctType;
     companyChooseController.companySelectDelegate=self;
     companyChooseController.companysData=[self.chooseModel.companys copy];
       [self.navigationController pushViewController:companyChooseController animated:YES];

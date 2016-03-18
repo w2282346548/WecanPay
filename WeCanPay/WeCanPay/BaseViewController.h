@@ -23,4 +23,8 @@
 
 -(void)ShowMsg:(NSString *)msg;
 
+-(void)ShowLORMsg:(NSString *)msg;
+
+-(void)DismissLORMsg;
+
 @end

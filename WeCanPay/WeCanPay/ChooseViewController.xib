@@ -10,6 +10,7 @@
                 <outlet property="BtnGoNext" destination="kMN-lH-Y39" id="8dj-Dn-oyX"/>
                 <outlet property="imagePic" destination="ZTc-tV-FYV" id="wcs-j6-xwj"/>
                 <outlet property="lbCompany" destination="74D-dp-eCT" id="ykD-yx-NdL"/>
+                <outlet property="lbProtocol" destination="zzW-qv-DXa" id="aXD-AK-oc1"/>
                 <outlet property="lbTitle" destination="DOq-8D-mAt" id="OU3-1D-gzE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

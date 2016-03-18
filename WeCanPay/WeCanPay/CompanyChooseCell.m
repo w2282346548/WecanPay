@@ -30,15 +30,13 @@
 
     // Configure the view for the selected state
     //self.isSelcet=selected;
-
-
-
  
 }
 
 
 -(void)setModel:(CompanyChooseModel *)model{
     _model=model;
+    
     [self.CompanyCell setTitle:_model.companyName forState:UIControlStateNormal];
 }
 

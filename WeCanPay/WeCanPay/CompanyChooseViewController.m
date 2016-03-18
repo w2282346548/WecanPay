@@ -92,6 +92,28 @@
    CompanyChooseCell *cell= [self.tbvCompanys cellForRowAtIndexPath:indexPath];
     cell.isSelcet=YES;
     self.currectIndex=indexPath;
+    
+    switch (self.currenctType) {
+        case ChooseTypeWater:
+            [GVUserDefaults standardUserDefaults].selectedWaterCompanyIndex=self.currectIndex.row;
+            break;
+        case ChooseTypeHeat:
+            [GVUserDefaults standardUserDefaults].selectedHeatCompanyIndex=self.currectIndex.row;
+            break;
+        case ChooseTypeGas:
+            [GVUserDefaults standardUserDefaults].selectedGasCompanyIndex=self.currectIndex.row;
+            break;
+        case ChooseTypeElectric:
+            [GVUserDefaults standardUserDefaults].selectedElectricCompanyIndex=self.currectIndex.row;
+            break;
+        case ChooseTypeProperty:
+            [GVUserDefaults standardUserDefaults].selectedPropertyCompanyIndex=self.currectIndex.row;
+            break;
+        default:
+            break;
+    }
+
+    
       CompanyChooseModel *model=[CompanyChooseModel new];
       NSDictionary *dict=[self.companysData objectAtIndex:indexPath.row];
         model.companyName=dict[@"title"];
@@ -104,8 +126,32 @@
     
 }
 
--(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    return indexPath;
+-(NSIndexPath *)currectIndex{
+    if (!_currectIndex) {
+        NSInteger index;
+        switch (self.currenctType) {
+            case ChooseTypeWater:
+                index=[GVUserDefaults standardUserDefaults].selectedWaterCompanyIndex;
+                break;
+            case ChooseTypeHeat:
+                index=[GVUserDefaults standardUserDefaults].selectedHeatCompanyIndex;
+                break;
+            case ChooseTypeGas:
+                index=[GVUserDefaults standardUserDefaults].selectedGasCompanyIndex;
+                break;
+            case ChooseTypeElectric:
+                index=[GVUserDefaults standardUserDefaults].selectedElectricCompanyIndex;
+                break;
+            case ChooseTypeProperty:
+                index=[GVUserDefaults standardUserDefaults].selectedPropertyCompanyIndex;
+                break;
+            default:
+                break;
+        }
+         NSIndexPath *indexPath=[NSIndexPath indexPathForRow:index inSection:0];
+        _currectIndex=indexPath;
+    }
+    return _currectIndex;
 }
 
 @end

@@ -63,6 +63,18 @@
 				<key>title</key>
 				<string>重庆燃气公司</string>
 			</dict>
+			<dict>
+				<key>id</key>
+				<string>000003</string>
+				<key>title</key>
+				<string>国家燃气公司</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<string>000004</string>
+				<key>title</key>
+				<string>国家燃气总公司</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>

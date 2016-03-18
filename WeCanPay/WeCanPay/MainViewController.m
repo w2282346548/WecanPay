@@ -265,8 +265,8 @@
 
 
 -(void)NetWorkIsNo{
-[self ShowMsg:@"没有网络，请连接网络"];
-
+//[self ShowMsg:@"没有网络，请连接网络"];
+    [self ShowLORMsg:@"没有网络，请连接网络"];
 }
 -(void)NetWorkIsWWAN{}
 -(void)NetWorkIsWIFI{}

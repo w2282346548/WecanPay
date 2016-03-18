@@ -55,6 +55,31 @@
 		71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E224981C7ED6C40069FCFF /* bigShadow.png */; };
 		71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E2249B1C7EDE1C0069FCFF /* MyViewController.m */; };
 		71E2249E1C7EDE1C0069FCFF /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71E2249C1C7EDE1C0069FCFF /* MyViewController.xib */; };
+		71E9EA161C9B93EE003E95D5 /* BaseWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E9EA141C9B93EE003E95D5 /* BaseWKWebViewController.m */; };
+		71E9EA171C9B93EE003E95D5 /* BaseWKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA151C9B93EE003E95D5 /* BaseWKWebViewController.xib */; };
+		71E9EA1A1C9B9533003E95D5 /* protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA191C9B9533003E95D5 /* protocol.html */; };
+		71E9EA1D1C9BD875003E95D5 /* LORMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E9EA1C1C9BD875003E95D5 /* LORMessageView.m */; };
+		71E9EA341C9BE10E003E95D5 /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA221C9BE10E003E95D5 /* NotificationBackgroundError.png */; };
+		71E9EA351C9BE10E003E95D5 /* NotificationBackgroundError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA231C9BE10E003E95D5 /* NotificationBackgroundError@2x.png */; };
+		71E9EA361C9BE10E003E95D5 /* NotificationBackgroundErrorIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA241C9BE10E003E95D5 /* NotificationBackgroundErrorIcon.png */; };
+		71E9EA371C9BE10E003E95D5 /* NotificationBackgroundErrorIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA251C9BE10E003E95D5 /* NotificationBackgroundErrorIcon@2x.png */; };
+		71E9EA381C9BE10E003E95D5 /* NotificationBackgroundMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA261C9BE10E003E95D5 /* NotificationBackgroundMessage.png */; };
+		71E9EA391C9BE10E003E95D5 /* NotificationBackgroundMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA271C9BE10E003E95D5 /* NotificationBackgroundMessage@2x.png */; };
+		71E9EA3A1C9BE10E003E95D5 /* NotificationBackgroundSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA281C9BE10E003E95D5 /* NotificationBackgroundSuccess.png */; };
+		71E9EA3B1C9BE10E003E95D5 /* NotificationBackgroundSuccess@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA291C9BE10E003E95D5 /* NotificationBackgroundSuccess@2x.png */; };
+		71E9EA3C1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA2A1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon.png */; };
+		71E9EA3D1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA2B1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon@2x.png */; };
+		71E9EA3E1C9BE10E003E95D5 /* NotificationBackgroundWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA2C1C9BE10E003E95D5 /* NotificationBackgroundWarning.png */; };
+		71E9EA3F1C9BE10E003E95D5 /* NotificationBackgroundWarning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA2D1C9BE10E003E95D5 /* NotificationBackgroundWarning@2x.png */; };
+		71E9EA401C9BE10E003E95D5 /* NotificationBackgroundWarningIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA2E1C9BE10E003E95D5 /* NotificationBackgroundWarningIcon.png */; };
+		71E9EA411C9BE10E003E95D5 /* NotificationBackgroundWarningIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA2F1C9BE10E003E95D5 /* NotificationBackgroundWarningIcon@2x.png */; };
+		71E9EA421C9BE10E003E95D5 /* NotificationButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA301C9BE10E003E95D5 /* NotificationButtonBackground.png */; };
+		71E9EA431C9BE10E003E95D5 /* NotificationButtonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA311C9BE10E003E95D5 /* NotificationButtonBackground@2x.png */; };
+		71E9EA441C9BE10E003E95D5 /* LORMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA321C9BE10E003E95D5 /* LORMessagesDefaultDesign.json */; };
+		71E9EA4B1C9BECEC003E95D5 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E9EA481C9BECEC003E95D5 /* HexColors.m */; };
+		71E9EA4C1C9BECEC003E95D5 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = 71E9EA491C9BECEC003E95D5 /* LICENCE */; };
+		71E9EA4D1C9BECEC003E95D5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 71E9EA4A1C9BECEC003E95D5 /* README.md */; };
+		71E9EA501C9BF012003E95D5 /* LORMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E9EA4F1C9BF012003E95D5 /* LORMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +167,35 @@
 		71E2249A1C7EDE1C0069FCFF /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		71E2249B1C7EDE1C0069FCFF /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		71E2249C1C7EDE1C0069FCFF /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		71E9EA131C9B93EE003E95D5 /* BaseWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWKWebViewController.h; sourceTree = "<group>"; };
+		71E9EA141C9B93EE003E95D5 /* BaseWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWKWebViewController.m; sourceTree = "<group>"; };
+		71E9EA151C9B93EE003E95D5 /* BaseWKWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseWKWebViewController.xib; sourceTree = "<group>"; };
+		71E9EA191C9B9533003E95D5 /* protocol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = protocol.html; sourceTree = "<group>"; };
+		71E9EA1B1C9BD875003E95D5 /* LORMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORMessageView.h; sourceTree = "<group>"; };
+		71E9EA1C1C9BD875003E95D5 /* LORMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORMessageView.m; sourceTree = "<group>"; };
+		71E9EA221C9BE10E003E95D5 /* NotificationBackgroundError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundError.png; sourceTree = "<group>"; };
+		71E9EA231C9BE10E003E95D5 /* NotificationBackgroundError@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationBackgroundError@2x.png"; sourceTree = "<group>"; };
+		71E9EA241C9BE10E003E95D5 /* NotificationBackgroundErrorIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundErrorIcon.png; sourceTree = "<group>"; };
+		71E9EA251C9BE10E003E95D5 /* NotificationBackgroundErrorIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationBackgroundErrorIcon@2x.png"; sourceTree = "<group>"; };
+		71E9EA261C9BE10E003E95D5 /* NotificationBackgroundMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundMessage.png; sourceTree = "<group>"; };
+		71E9EA271C9BE10E003E95D5 /* NotificationBackgroundMessage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationBackgroundMessage@2x.png"; sourceTree = "<group>"; };
+		71E9EA281C9BE10E003E95D5 /* NotificationBackgroundSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundSuccess.png; sourceTree = "<group>"; };
+		71E9EA291C9BE10E003E95D5 /* NotificationBackgroundSuccess@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationBackgroundSuccess@2x.png"; sourceTree = "<group>"; };
+		71E9EA2A1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundSuccessIcon.png; sourceTree = "<group>"; };
+		71E9EA2B1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationBackgroundSuccessIcon@2x.png"; sourceTree = "<group>"; };
+		71E9EA2C1C9BE10E003E95D5 /* NotificationBackgroundWarning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundWarning.png; sourceTree = "<group>"; };
+		71E9EA2D1C9BE10E003E95D5 /* NotificationBackgroundWarning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationBackgroundWarning@2x.png"; sourceTree = "<group>"; };
+		71E9EA2E1C9BE10E003E95D5 /* NotificationBackgroundWarningIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundWarningIcon.png; sourceTree = "<group>"; };
+		71E9EA2F1C9BE10E003E95D5 /* NotificationBackgroundWarningIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationBackgroundWarningIcon@2x.png"; sourceTree = "<group>"; };
+		71E9EA301C9BE10E003E95D5 /* NotificationButtonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationButtonBackground.png; sourceTree = "<group>"; };
+		71E9EA311C9BE10E003E95D5 /* NotificationButtonBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NotificationButtonBackground@2x.png"; sourceTree = "<group>"; };
+		71E9EA321C9BE10E003E95D5 /* LORMessagesDefaultDesign.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LORMessagesDefaultDesign.json; sourceTree = "<group>"; };
+		71E9EA471C9BECEC003E95D5 /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
+		71E9EA481C9BECEC003E95D5 /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
+		71E9EA491C9BECEC003E95D5 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		71E9EA4A1C9BECEC003E95D5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		71E9EA4E1C9BF012003E95D5 /* LORMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LORMessage.h; sourceTree = "<group>"; };
+		71E9EA4F1C9BF012003E95D5 /* LORMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LORMessage.m; sourceTree = "<group>"; };
 		B0B14BDFCAA07B68AFE7E7F9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +239,7 @@
 				7118977A1C85800A0095EFDD /* ChooseViewController.xib */,
 				717DDA901C97A42B0026D99A /* ChooseViewModel.h */,
 				717DDA911C97A42B0026D99A /* ChooseViewModel.m */,
+				71E9EA181C9B9450003E95D5 /* Protocol */,
 			);
 			name = Choose;
 			sourceTree = "<group>";
@@ -251,6 +306,7 @@
 		7193398E1C7E8ED4009B4D7B /* ThridLib */ = {
 			isa = PBXGroup;
 			children = (
+				71E9EA451C9BECEC003E95D5 /* HexColors */,
 				711236B41C8EA1CA00ADE70C /* LorNetTool */,
 				71D0935D1C83DCA0003E27FC /* DLRadioButton */,
 				71D093561C83D7B8003E27FC /* GVUserDefaults */,
@@ -260,6 +316,7 @@
 				716470481C8FB44300DD2096 /* LORToast.m */,
 				7164704A1C8FF8AA00DD2096 /* LORCustomMsgView.h */,
 				7164704B1C8FF8AA00DD2096 /* LORCustomMsgView.m */,
+				71E9EA1E1C9BE029003E95D5 /* LORMessage */,
 			);
 			name = ThridLib;
 			sourceTree = "<group>";
@@ -284,6 +341,9 @@
 		719339901C7E8F06009B4D7B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				71E9EA131C9B93EE003E95D5 /* BaseWKWebViewController.h */,
+				71E9EA141C9B93EE003E95D5 /* BaseWKWebViewController.m */,
+				71E9EA151C9B93EE003E95D5 /* BaseWKWebViewController.xib */,
 				719339911C7E8F42009B4D7B /* BaseViewController.h */,
 				719339921C7E8F42009B4D7B /* BaseViewController.m */,
 			);
@@ -417,6 +477,69 @@
 			name = My;
 			sourceTree = "<group>";
 		};
+		71E9EA181C9B9450003E95D5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				71E9EA191C9B9533003E95D5 /* protocol.html */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		71E9EA1E1C9BE029003E95D5 /* LORMessage */ = {
+			isa = PBXGroup;
+			children = (
+				71E9EA201C9BE10E003E95D5 /* Assets */,
+				71E9EA1B1C9BD875003E95D5 /* LORMessageView.h */,
+				71E9EA1C1C9BD875003E95D5 /* LORMessageView.m */,
+				71E9EA4E1C9BF012003E95D5 /* LORMessage.h */,
+				71E9EA4F1C9BF012003E95D5 /* LORMessage.m */,
+			);
+			name = LORMessage;
+			sourceTree = "<group>";
+		};
+		71E9EA201C9BE10E003E95D5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				71E9EA221C9BE10E003E95D5 /* NotificationBackgroundError.png */,
+				71E9EA231C9BE10E003E95D5 /* NotificationBackgroundError@2x.png */,
+				71E9EA241C9BE10E003E95D5 /* NotificationBackgroundErrorIcon.png */,
+				71E9EA251C9BE10E003E95D5 /* NotificationBackgroundErrorIcon@2x.png */,
+				71E9EA261C9BE10E003E95D5 /* NotificationBackgroundMessage.png */,
+				71E9EA271C9BE10E003E95D5 /* NotificationBackgroundMessage@2x.png */,
+				71E9EA281C9BE10E003E95D5 /* NotificationBackgroundSuccess.png */,
+				71E9EA291C9BE10E003E95D5 /* NotificationBackgroundSuccess@2x.png */,
+				71E9EA2A1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon.png */,
+				71E9EA2B1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon@2x.png */,
+				71E9EA2C1C9BE10E003E95D5 /* NotificationBackgroundWarning.png */,
+				71E9EA2D1C9BE10E003E95D5 /* NotificationBackgroundWarning@2x.png */,
+				71E9EA2E1C9BE10E003E95D5 /* NotificationBackgroundWarningIcon.png */,
+				71E9EA2F1C9BE10E003E95D5 /* NotificationBackgroundWarningIcon@2x.png */,
+				71E9EA301C9BE10E003E95D5 /* NotificationButtonBackground.png */,
+				71E9EA311C9BE10E003E95D5 /* NotificationButtonBackground@2x.png */,
+				71E9EA321C9BE10E003E95D5 /* LORMessagesDefaultDesign.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		71E9EA451C9BECEC003E95D5 /* HexColors */ = {
+			isa = PBXGroup;
+			children = (
+				71E9EA461C9BECEC003E95D5 /* Classes */,
+				71E9EA491C9BECEC003E95D5 /* LICENCE */,
+				71E9EA4A1C9BECEC003E95D5 /* README.md */,
+			);
+			path = HexColors;
+			sourceTree = "<group>";
+		};
+		71E9EA461C9BECEC003E95D5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				71E9EA471C9BECEC003E95D5 /* HexColors.h */,
+				71E9EA481C9BECEC003E95D5 /* HexColors.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		E99024C1E695EF47D789761B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,18 +611,38 @@
 				71E2249E1C7EDE1C0069FCFF /* MyViewController.xib in Resources */,
 				7118977C1C85800A0095EFDD /* ChooseViewController.xib in Resources */,
 				71DA5A2C1C968AA50067E218 /* MineInfo.plist in Resources */,
+				71E9EA371C9BE10E003E95D5 /* NotificationBackgroundErrorIcon@2x.png in Resources */,
+				71E9EA3A1C9BE10E003E95D5 /* NotificationBackgroundSuccess.png in Resources */,
+				71E9EA431C9BE10E003E95D5 /* NotificationButtonBackground@2x.png in Resources */,
+				71E9EA3E1C9BE10E003E95D5 /* NotificationBackgroundWarning.png in Resources */,
+				71E9EA421C9BE10E003E95D5 /* NotificationButtonBackground.png in Resources */,
+				71E9EA1A1C9B9533003E95D5 /* protocol.html in Resources */,
+				71E9EA171C9B93EE003E95D5 /* BaseWKWebViewController.xib in Resources */,
 				7193398C1C7E8E88009B4D7B /* ZYBannerView.bundle in Resources */,
+				71E9EA3D1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
+				71E9EA3C1C9BE10E003E95D5 /* NotificationBackgroundSuccessIcon.png in Resources */,
+				71E9EA381C9BE10E003E95D5 /* NotificationBackgroundMessage.png in Resources */,
+				71E9EA341C9BE10E003E95D5 /* NotificationBackgroundError.png in Resources */,
 				719339791C7E872E009B4D7B /* LaunchScreen.storyboard in Resources */,
 				71CBC66F1C802E6500C06D59 /* CityData.plist in Resources */,
 				71E224991C7ED6C40069FCFF /* bigShadow.png in Resources */,
+				71E9EA4C1C9BECEC003E95D5 /* LICENCE in Resources */,
 				712534E41C97BDC0005AB9C7 /* ChooseInfo.plist in Resources */,
+				71E9EA411C9BE10E003E95D5 /* NotificationBackgroundWarningIcon@2x.png in Resources */,
 				71CBC6841C80440000C06D59 /* MyInputView.xib in Resources */,
 				719339981C7EA36B009B4D7B /* MainViewController.xib in Resources */,
+				71E9EA3F1C9BE10E003E95D5 /* NotificationBackgroundWarning@2x.png in Resources */,
 				719339761C7E872E009B4D7B /* Assets.xcassets in Resources */,
+				71E9EA3B1C9BE10E003E95D5 /* NotificationBackgroundSuccess@2x.png in Resources */,
 				719339811C7E87C3009B4D7B /* Podfile in Resources */,
+				71E9EA361C9BE10E003E95D5 /* NotificationBackgroundErrorIcon.png in Resources */,
 				71CBC67A1C803E6000C06D59 /* LoginViewController.xib in Resources */,
 				71D77C121C97E0240085BB47 /* CompanyChooseViewController.xib in Resources */,
 				71D77C171C97EE490085BB47 /* CompanyChooseCell.xib in Resources */,
+				71E9EA351C9BE10E003E95D5 /* NotificationBackgroundError@2x.png in Resources */,
+				71E9EA391C9BE10E003E95D5 /* NotificationBackgroundMessage@2x.png in Resources */,
+				71E9EA401C9BE10E003E95D5 /* NotificationBackgroundWarningIcon.png in Resources */,
+				71E9EA441C9BE10E003E95D5 /* LORMessagesDefaultDesign.json in Resources */,
 				71D093651C83E0C3003E27FC /* PayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,10 +691,12 @@
 				711236B71C8EAB2B00ADE70C /* LORNetWorkManager.m in Sources */,
 				7193398D1C7E8E88009B4D7B /* ZYBannerView.m in Sources */,
 				7193399C1C7EBD8F009B4D7B /* ProductConfig.m in Sources */,
+				71E9EA161C9B93EE003E95D5 /* BaseWKWebViewController.m in Sources */,
 				71CBC6731C802E6500C06D59 /* TLCityPickerController.m in Sources */,
 				7164704C1C8FF8AA00DD2096 /* LORCustomMsgView.m in Sources */,
 				717DDA921C97A42B0026D99A /* ChooseViewModel.m in Sources */,
 				71DA92671C99285B0076A76D /* CompanyChooseModel.m in Sources */,
+				71E9EA501C9BF012003E95D5 /* LORMessage.m in Sources */,
 				71CBC6721C802E6500C06D59 /* TLCityHeaderView.m in Sources */,
 				716470491C8FB44300DD2096 /* LORToast.m in Sources */,
 				7193396E1C7E872E009B4D7B /* AppDelegate.m in Sources */,
@@ -560,6 +705,8 @@
 				71CBC6741C802E6500C06D59 /* TLCityPickerSearchResultController.m in Sources */,
 				71E2249D1C7EDE1C0069FCFF /* MyViewController.m in Sources */,
 				71CBC6791C803E6000C06D59 /* LoginViewController.m in Sources */,
+				71E9EA4D1C9BECEC003E95D5 /* README.md in Sources */,
+				71E9EA1D1C9BD875003E95D5 /* LORMessageView.m in Sources */,
 				7118977B1C85800A0095EFDD /* ChooseViewController.m in Sources */,
 				71D77C111C97E0240085BB47 /* CompanyChooseViewController.m in Sources */,
 				7193398A1C7E8E88009B4D7B /* ZYBannerCell.m in Sources */,
@@ -567,6 +714,7 @@
 				71CBC6821C80440000C06D59 /* MyInputViewModel.m in Sources */,
 				71CBC6831C80440000C06D59 /* MyInputView.m in Sources */,
 				71D093591C83D7B8003E27FC /* GVUserDefaults.m in Sources */,
+				71E9EA4B1C9BECEC003E95D5 /* HexColors.m in Sources */,
 				71CBC6711C802E6500C06D59 /* TLCityGroupCell.m in Sources */,
 				719339971C7EA36B009B4D7B /* MainViewController.m in Sources */,
 				71D093601C83DCA0003E27FC /* DLRadioButton.m in Sources */,
