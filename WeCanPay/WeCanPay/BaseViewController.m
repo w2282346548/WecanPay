@@ -34,7 +34,7 @@
     
     self.hub=[[MBProgressHUD alloc]init];
     self.hub.mode=MBProgressHUDModeIndeterminate;
-    self.hub.detailsLabelText=@"Login....";
+    self.hub.detailsLabelText=@"Load....";
     [self.view addSubview:self.hub];
     
     self.networkDelegate=self;

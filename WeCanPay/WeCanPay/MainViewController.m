@@ -19,8 +19,10 @@
 #import "PayViewController.h"
 #import "ChooseViewController.h"
 #import "LORCustomMsgView.h"
+#import "SDCycleScrollView.h"
+#import "HistoryBillViewController.h"
 
-@interface MainViewController ()<ZYBannerViewDataSource, ZYBannerViewDelegate,TLCityPickerDelegate>
+@interface MainViewController ()<ZYBannerViewDataSource, ZYBannerViewDelegate,TLCityPickerDelegate,SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *LoginedView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *bgScrollerView;
@@ -113,72 +115,84 @@
 }
 
 -(void)initbannerView{
-    ZYBannerView *banner=[[ZYBannerView alloc] init];
-    banner.dataSource = self;
-    banner.delegate = self;
-    banner.shouldLoop=NO;
-    banner.autoScroll=YES;
-    banner.scrollInterval=3.5;
-    [self.bannerView addSubview:banner];
+//    ZYBannerView *banner=[[ZYBannerView alloc] init];
+//    banner.dataSource = self;
+//    banner.delegate = self;
+//    banner.shouldLoop=NO;
+//    banner.autoScroll=YES;
+//    banner.scrollInterval=3.5;
+    SDCycleScrollView *banner1=[SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    banner1.pageControlAliment=SDCycleScrollViewPageContolStyleAnimated;
+    banner1.currentPageDotColor=[UIColor whiteColor];
+    banner1.autoScrollTimeInterval=5;
+    [self.bannerView addSubview:banner1];
  
-    [banner mas_makeConstraints:^(MASConstraintMaker *make) {
+    [banner1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@0);
         make.right.equalTo(@0);
         make.bottom.equalTo(@0);
         make.top.equalTo(@0);
     }];
     
+    banner1.imageURLStringsGroup=self.dataArray;
+    
 }
 
 -(void)initfunctionView{
     
 }
+#pragma mark - SDCycleScrollViewDelegate
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
 
+  NSLog(@"点击了第%ld个项目", index);
+}
+
+//#pragma mark - ZYBannerViewDataSource
 // 返回Banner需要显示Item(View)的个数
-- (NSInteger)numberOfItemsInBanner:(ZYBannerView *)banner
-{
-    return self.dataArray.count;
-}
-
+//- (NSInteger)numberOfItemsInBanner:(ZYBannerView *)banner
+//{
+//    return self.dataArray.count;
+//}
+//
 // 返回Banner在不同的index所要显示的View (可以是完全自定义的view, 且无需设置frame)
-- (UIView *)banner:(ZYBannerView *)banner viewForItemAtIndex:(NSInteger)index
-{
-    // 取出数据
-    NSString *imageName = self.dataArray[index];
-    
-    // 创建将要显示控件
-    UIImageView *imageView = [[UIImageView alloc] init];
-    imageView.image = [UIImage imageNamed:imageName];
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
-    
-    return imageView;
-}
-
+//- (UIView *)banner:(ZYBannerView *)banner viewForItemAtIndex:(NSInteger)index
+//{
+//    // 取出数据
+//    NSString *imageName = self.dataArray[index];
+//    
+//    // 创建将要显示控件
+//    UIImageView *imageView = [[UIImageView alloc] init];
+//    imageView.image = [UIImage imageNamed:imageName];
+//    imageView.contentMode = UIViewContentModeScaleAspectFill;
+//    
+//    return imageView;
+//}
+//
 // 返回Footer在不同状态时要显示的文字
-- (NSString *)banner:(ZYBannerView *)banner titleForFooterWithState:(ZYBannerFooterState)footerState
-{
-    if (footerState == ZYBannerFooterStateIdle) {
-        return @"拖动进入下一页";
-    } else if (footerState == ZYBannerFooterStateTrigger) {
-        return @"释放进入下一页";
-    }
-    return nil;
-}
-
-#pragma mark - ZYBannerViewDelegate
-
-// 在这里实现点击事件的处理
-- (void)banner:(ZYBannerView *)banner didSelectItemAtIndex:(NSInteger)index
-{
-    NSLog(@"点击了第%ld个项目", index);
-}
-
-// 在这里实现拖动footer后的事件处理
-- (void)bannerFooterDidTrigger:(ZYBannerView *)banner
-{
-    NSLog(@"触发了footer");
-
-}
+//- (NSString *)banner:(ZYBannerView *)banner titleForFooterWithState:(ZYBannerFooterState)footerState
+//{
+//    if (footerState == ZYBannerFooterStateIdle) {
+//        return @"拖动进入下一页";
+//    } else if (footerState == ZYBannerFooterStateTrigger) {
+//        return @"释放进入下一页";
+//    }
+//    return nil;
+//}
+//
+//#pragma mark - ZYBannerViewDelegate
+//
+//// 在这里实现点击事件的处理
+//- (void)banner:(ZYBannerView *)banner didSelectItemAtIndex:(NSInteger)index
+//{
+//    NSLog(@"点击了第%ld个项目", index);
+//}
+//
+//// 在这里实现拖动footer后的事件处理
+//- (void)bannerFooterDidTrigger:(ZYBannerView *)banner
+//{
+//    NSLog(@"触发了footer");
+//
+//}
 
 #pragma mark - TLCityPickerDelegate
 - (void) cityPickerController:(TLCityPickerController *)cityPickerViewController didSelectCity:(TLCity *)city
@@ -202,21 +216,13 @@
 - (NSArray *)dataArray
 {
     if (!_dataArray) {
-        _dataArray = @[@"ad_0.jpg", @"ad_1.jpg", @"ad_2.jpg"];
+        _dataArray = @[@"ad_0.jpg", @"ad_1.jpg", @"ad_2.jpg", @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
+                       @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
+                       @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"];
     }
     return _dataArray;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 0;
-}
-
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-
-    
-    return nil;
-}
 - (IBAction)btnFunClicked:(id)sender {
     BOOL islogin=[GVUserDefaults standardUserDefaults].isLogin;
     if (islogin) {
@@ -245,7 +251,25 @@
     }else{
         [self GotoLogin];
     }
+}
 
+/**
+ *  历史账单功能按钮
+ *
+ *  @param sender
+ */
+- (IBAction)btnHistoryBillClicked:(UIControl *)sender {
+
+    BOOL islogin=[GVUserDefaults standardUserDefaults].isLogin;
+    if (islogin) {
+        HistoryBillViewController *historyBillController=[[HistoryBillViewController alloc]initWithNibName:@"HistoryBillViewController" bundle:nil];
+        
+        [self.navigationController pushViewController:historyBillController animated:YES];
+    }
+    else{
+        [self GotoLogin];
+    }
+    
 }
 
 - (IBAction)BtnLoginOrRegClicked:(id)sender {

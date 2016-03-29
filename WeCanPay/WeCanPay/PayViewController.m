@@ -20,7 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self initNavBar];
-    ViewRadius(self.BtnPay, 5.0);
+    //ViewRadius(self.BtnPay, 10.0);
+
 }
 
 -(void)initNavBar{

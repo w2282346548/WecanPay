@@ -82,9 +82,48 @@
 }
 
 -(void)btnLoginClick{
-    [GVUserDefaults standardUserDefaults].isLogin=YES;
-    if ([GVUserDefaults standardUserDefaults].isLogin) {
-            [self dismissViewControllerAnimated:YES completion:nil];
+    //先获取登陆框和密码值
+    UITextField *tfPassword=(UITextField *)[self.vPassword.subviews[0] viewWithTag:10];
+    UITextField *tfUserName=(UITextField *)[self.vAccount.subviews[0] viewWithTag:10];
+    NSString * username=tfUserName.text;
+    NSString * passsword=tfPassword.text;
+    self.btnLogin.enabled=NO;
+    if ([self isBlankString:username]||[self isBlankString:passsword]) {
+        UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"消息" message:@"用户名/密码不能为空" preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            self.btnLogin.enabled=YES;
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+        return;
+    }else{
+        [self.hub show:YES];
+         //进行网络请求
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            NSDictionary *dic=@{@"username":username,@"passsword":passsword};
+          //  [LORNetWorkManager sharedManager].responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+            //调用网络
+            [[LORNetWorkManager sharedManager]requestWithMethod:POST WithUrl:API_LOGIN_URL WithParams:dic WithSuccessBlock:^(NSDictionary *dic) {//返回数据必须是JSON格式的
+                if ([[dic objectForKey:@"data"] isEqual:@"ok"]) {
+                    //保存此次登陆的信息吧
+                    [self.hub hide:YES];
+                       self.btnLogin.enabled=YES;
+                    
+                    [GVUserDefaults standardUserDefaults].isLogin=YES;
+                    if ([GVUserDefaults standardUserDefaults].isLogin) {
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    }
+                    
+                    
+                }
+                NSLog(@"html:%@",dic);
+            } WithFailureBlock:^(NSError *error) {
+                  NSLog(@"err:%@",error);
+                [self.hub hide:YES];
+                   self.btnLogin.enabled=YES;
+            }];
+           
+        });
+    
     }
 }
 -(void)initInputView{
@@ -141,4 +180,17 @@
 
 
 
+
+- (BOOL) isBlankString:(NSString *)string {
+    if (string == nil || string == NULL) {
+        return YES;
+    }
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
+        return YES;
+    }
+    return NO;
+}
 @end

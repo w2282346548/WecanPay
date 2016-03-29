@@ -23,8 +23,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
+
     
     [CRToastManager setDefaultOptions:[ProductConfig new].CRToastOptions];
     

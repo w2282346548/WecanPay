@@ -48,7 +48,7 @@
                                                 <action selector="BtnLoginOrRegClicked:" destination="-1" eventType="touchUpInside" id="NHK-43-1wA"/>
                                             </connections>
                                         </button>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Je-aC-4W1" userLabel="LoginedView">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Je-aC-4W1" userLabel="LoginedView">
                                             <rect key="frame" x="0.0" y="64" width="375" height="125"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="当前用户" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AI7-YX-N23">
@@ -68,7 +68,11 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.28235294117647058" green="0.84313725490196079" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="4Je-aC-4W1" secondAttribute="bottom" constant="-9" id="4xS-Mu-3D1"/>
+                                        <constraint firstAttribute="trailing" secondItem="4Je-aC-4W1" secondAttribute="trailing" id="Gyd-Mo-gk7"/>
+                                        <constraint firstItem="4Je-aC-4W1" firstAttribute="leading" secondItem="qc9-i3-vIu" secondAttribute="leading" id="aA2-XB-l5b"/>
                                         <constraint firstAttribute="bottom" secondItem="Jyg-Og-X56" secondAttribute="bottom" constant="24" id="dpO-59-yPa"/>
+                                        <constraint firstItem="4Je-aC-4W1" firstAttribute="top" secondItem="qc9-i3-vIu" secondAttribute="top" constant="64" id="r3w-sZ-nch"/>
                                         <constraint firstAttribute="width" secondItem="qc9-i3-vIu" secondAttribute="height" multiplier="66:38" constant="63" id="r7u-Ug-bcm"/>
                                         <constraint firstItem="Jyg-Og-X56" firstAttribute="centerX" secondItem="qc9-i3-vIu" secondAttribute="centerX" id="xc1-Pj-UTs"/>
                                     </constraints>
@@ -212,7 +216,7 @@
                                                 <constraint firstItem="fAs-ky-gkC" firstAttribute="centerX" secondItem="ChF-Ok-BCa" secondAttribute="centerX" id="uD0-3C-x8a"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUE-UW-Gya" userLabel="lishizhangdanView">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yUE-UW-Gya" userLabel="lishizhangdanView" customClass="UIControl">
                                             <rect key="frame" x="0.0" y="228" width="124" height="112"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lishi" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-g0-m3v">
@@ -241,6 +245,9 @@
                                                 <constraint firstItem="NEN-CC-GYM" firstAttribute="leading" secondItem="yUE-UW-Gya" secondAttribute="leading" id="kac-cr-Tu5"/>
                                                 <constraint firstAttribute="trailing" secondItem="NEN-CC-GYM" secondAttribute="trailing" id="q8y-eu-Xd5"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="btnHistoryBillClicked:" destination="-1" eventType="touchUpInside" id="3GD-Zg-Tku"/>
+                                            </connections>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yh-fE-zaC" userLabel="jiaofeijiluView">
                                             <rect key="frame" x="125" y="228" width="125" height="112"/>

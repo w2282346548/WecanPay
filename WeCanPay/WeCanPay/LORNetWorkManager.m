@@ -29,7 +29,7 @@
         self.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [self.requestSerializer setValue:url.absoluteString forHTTPHeaderField:@"Referer"];
-        
+       // self.responseSerializer=[AFHTTPResponseSerializer serializer];
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
         
         self.securityPolicy.allowInvalidCertificates = YES;

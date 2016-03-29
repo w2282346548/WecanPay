@@ -4,9 +4,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="方正兰亭纤黑.ttf">
+            <string>FZLTXHJW--GB1-0</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayViewController">
             <connections>
+                <outlet property="BtnPay" destination="d15-cu-PkE" id="688-px-wqX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -51,7 +57,7 @@
                                                 <constraint firstAttribute="width" constant="182" id="PJm-dC-fzg"/>
                                                 <constraint firstAttribute="height" constant="35" id="tE9-aU-ii7"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="36"/>
+                                            <fontDescription key="fontDescription" name="FZLTXHJW--GB1-0" family="FZLanTingHeiS-EL-GB" pointSize="37"/>
                                             <color key="textColor" red="0.22352941176470589" green="0.22352941176470589" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -78,7 +84,6 @@
                                             <rect key="frame" x="117" y="115" width="195" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="2ce-09-oSn"/>
-                                                <constraint firstAttribute="width" constant="195" id="op1-KG-dNh"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,6 +108,11 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Ke3-iN-Ktq"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-Jr-2Jw">
                                             <rect key="frame" x="10" y="165" width="65" height="20"/>
@@ -117,7 +127,6 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="李香兰" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duT-jF-WJC">
                                             <rect key="frame" x="117" y="165" width="195" height="20"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="195" id="xDs-3L-GWE"/>
                                                 <constraint firstAttribute="height" constant="20" id="xhP-PO-Bcb"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -137,7 +146,6 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重庆某某某 小区小区多多颠三倒四" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEw-Pv-2JH">
                                             <rect key="frame" x="117" y="190" width="195" height="20"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="195" id="CVp-6C-RSA"/>
                                                 <constraint firstAttribute="height" constant="20" id="Cu3-Rg-672"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -156,9 +164,12 @@
                                         <constraint firstItem="wLj-N9-I6d" firstAttribute="top" secondItem="2K5-jP-Luw" secondAttribute="bottom" id="FLs-Jq-cjj"/>
                                         <constraint firstItem="44R-7C-g8w" firstAttribute="top" secondItem="JDx-Jr-2Jw" secondAttribute="bottom" constant="5" id="Jn3-ce-ers"/>
                                         <constraint firstItem="duT-jF-WJC" firstAttribute="leading" secondItem="JDx-Jr-2Jw" secondAttribute="trailing" constant="42" id="L9E-4P-7Ag"/>
+                                        <constraint firstAttribute="trailing" secondItem="uHP-1U-Qz6" secondAttribute="trailing" constant="8" id="O3l-mn-J88"/>
                                         <constraint firstItem="wts-iu-BOu" firstAttribute="top" secondItem="1X2-o9-gxJ" secondAttribute="bottom" constant="5" id="OtV-Yu-AA4"/>
+                                        <constraint firstAttribute="trailing" secondItem="duT-jF-WJC" secondAttribute="trailing" constant="8" id="Q3H-cJ-kkL"/>
                                         <constraint firstItem="duT-jF-WJC" firstAttribute="centerY" secondItem="JDx-Jr-2Jw" secondAttribute="centerY" id="R3z-tO-OFt"/>
                                         <constraint firstItem="JDx-Jr-2Jw" firstAttribute="leading" secondItem="nxm-CB-hIg" secondAttribute="leading" constant="10" id="VHt-nx-nBC"/>
+                                        <constraint firstAttribute="trailing" secondItem="HPl-dU-sy8" secondAttribute="trailing" constant="8" id="XH7-2R-Wkv"/>
                                         <constraint firstItem="wLj-N9-I6d" firstAttribute="leading" secondItem="nxm-CB-hIg" secondAttribute="leading" constant="10" id="eU6-sh-HyD"/>
                                         <constraint firstItem="1X2-o9-gxJ" firstAttribute="top" secondItem="QNV-tf-fZV" secondAttribute="bottom" constant="8" id="gcD-jv-5dd"/>
                                         <constraint firstItem="1X2-o9-gxJ" firstAttribute="leading" secondItem="nxm-CB-hIg" secondAttribute="leading" constant="10" id="hR9-CW-TEZ"/>
@@ -170,6 +181,7 @@
                                         <constraint firstItem="44R-7C-g8w" firstAttribute="leading" secondItem="nxm-CB-hIg" secondAttribute="leading" constant="10" id="q3s-yJ-vyD"/>
                                         <constraint firstItem="AEw-Pv-2JH" firstAttribute="centerY" secondItem="44R-7C-g8w" secondAttribute="centerY" id="rte-CG-oVE"/>
                                         <constraint firstItem="QNV-tf-fZV" firstAttribute="top" secondItem="wLj-N9-I6d" secondAttribute="bottom" constant="2" id="sK9-5J-j1t"/>
+                                        <constraint firstAttribute="trailing" secondItem="AEw-Pv-2JH" secondAttribute="trailing" constant="8" id="smX-Qm-BJA"/>
                                         <constraint firstItem="HPl-dU-sy8" firstAttribute="leading" secondItem="wts-iu-BOu" secondAttribute="trailing" constant="42" id="xRw-Tt-LbL"/>
                                         <constraint firstItem="t32-dQ-BpC" firstAttribute="leading" secondItem="2K5-jP-Luw" secondAttribute="trailing" constant="10" id="xcZ-Jf-ZpO"/>
                                         <constraint firstItem="JDx-Jr-2Jw" firstAttribute="top" secondItem="wts-iu-BOu" secondAttribute="bottom" constant="5" id="zMw-5C-GfL"/>
@@ -386,6 +398,11 @@
                                     <state key="normal" title="直接支付">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
@@ -427,7 +444,7 @@
                 <constraint firstItem="QvK-jN-4aF" firstAttribute="height" secondItem="Ab2-9P-8vB" secondAttribute="height" id="vSL-gc-3Ql"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="296" y="286"/>
+            <point key="canvasLocation" x="191" y="285"/>
         </view>
     </objects>
     <resources>
